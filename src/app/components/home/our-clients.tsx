@@ -7,15 +7,14 @@ import sparkles from "@/app/assets/images/sparkles.svg";
 import elohq from "@/app/assets/images/elohq.svg";
 import starplug from "@/app/assets/images/starplug.svg";
 import sblend from "@/app/assets/images/sblend.svg";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
+import Title from "../heading";
 
 const OurClients = () => {
   return (
     <Wrapper>
       <Flex w={"100%"} flexDir={"column"} alignItems={"center"}>
-        <Heading as={"h2"} textAlign={"center"} fontSize={"52px"} mb={"2rem"}>
-          Client’s from around the world
-        </Heading>
+        <Title>Client’s from around the world</Title>
         <Text
           textAlign={"center"}
           fontSize={"18px"}
@@ -30,12 +29,12 @@ const OurClients = () => {
 
       <Box>
         <Flex
-          h={{ base: "100px", md: "166px" }}
+          h={{ base: "100px", md: "130px" }}
           w={"100%"}
           alignItems={"center"}
         >
           <Flex w={"33%"} h={"100%"} justifyContent={"center"}>
-            <Image src={starks} alt={"hermes"} width={100} height={100} />
+            <Image src={starks} alt={"hermes"} width={130} height={130} />
           </Flex>
           <Flex
             borderX={"1px solid #0000004c"}
@@ -43,15 +42,15 @@ const OurClients = () => {
             h={"100%"}
             justifyContent={"center"}
           >
-            <Image src={hermes} alt={"hermes"} width={100} height={100} />
+            <Image src={hermes} alt={"hermes"} width={130} height={130} />
           </Flex>
           <Flex w={"33%"} h={"100%"} justifyContent={"center"}>
-            <Image src={sparkles} alt={"hermes"} width={100} height={100} />
+            <Image src={sparkles} alt={"hermes"} width={130} height={130} />
           </Flex>
         </Flex>
         <Flex
           borderY={"1px solid #0000004c"}
-          h={{ base: "100px", md: "166px" }}
+          h={{ base: "100px", md: "130px" }}
           alignItems={"center"}
           justifyContent={"space-around"}
         >
@@ -61,20 +60,20 @@ const OurClients = () => {
             justifyContent={"center"}
             borderRight={"1px solid #0000004c"}
           >
-            <Image src={elohq} alt={"elohq"} width={100} height={100} />
+            <Image src={elohq} alt={"elohq"} width={130} height={130} />
           </Flex>
           <Flex w={"50%"} h={"100%"} justifyContent={"center"}>
-            <Image src={starplug} alt={"starplug"} width={100} height={100} />
+            <Image src={starplug} alt={"starplug"} width={130} height={130} />
           </Flex>
         </Flex>
 
         <Flex
-          h={{ base: "100px", md: "166px" }}
+          h={{ base: "100px", md: "130px" }}
           w={"100%"}
           alignItems={"center"}
         >
           <Flex w={"33%"} h={"100%"} justifyContent={"center"}>
-            <Image src={sblend} alt={"sblend"} width={100} height={100} />
+            <Image src={sblend} alt={"sblend"} width={130} height={130} />
           </Flex>
           <Flex
             borderX={"1px solid #0000004c"}
@@ -82,10 +81,10 @@ const OurClients = () => {
             h={"100%"}
             justifyContent={"center"}
           >
-            <Image src={sparkles} alt={"sparkles"} width={100} height={100} />
+            <Image src={sparkles} alt={"sparkles"} width={130} height={130} />
           </Flex>
           <Flex w={"33%"} h={"100%"} justifyContent={"center"}>
-            <Image src={hermes} alt={"hermes"} width={100} height={100} />
+            <Image src={hermes} alt={"hermes"} width={130} height={130} />
           </Flex>
         </Flex>
       </Box>
