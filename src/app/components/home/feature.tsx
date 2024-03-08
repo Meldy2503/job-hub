@@ -1,16 +1,15 @@
 import React from "react";
 import Wrapper from "../wrapper";
 import { Box, Flex, HStack, Heading, Text, VStack } from "@chakra-ui/react";
-import Title from "../heading";
-import Image from "next/image";
 import worker1 from "@/app/assets/images/worker1.webp";
 import worker2 from "@/app/assets/images/worker2.webp";
 import worker3 from "@/app/assets/images/worker3.webp";
 import overlay from "@/app/assets/images/bg-overlay.svg";
+import Title from "../heading";
 
 const Feature = () => {
   return (
-    <Wrapper bg={"brand.250"} py={{ base: "9rem", md: "16rem" }} my={"7rem"}>
+    <Wrapper bg={"brand.250"} py={{ base: "15rem", md: "20rem" }} my={"7rem"}>
       <Flex justifyContent={"space-between"} w={"100%"}>
         <Box
           w="70%"
@@ -40,28 +39,30 @@ const Feature = () => {
         bgPosition="right"
         bgRepeat="no-repeat"
         width="100%"
-        height={{ base: "150rem", md: "90rem" }}
         borderRadius={"1.4rem"}
-        padding={{ base: "2rem", md: "4.4rem" }}
       >
         <Box>
-          <VStack maxW={"80rem"} mx={"auto"}>
-            <Heading fontSize={"3rem"} color="brand.100" textAlign={"center"}>
+          <VStack w={{ base: "100%", md: "90%" }} mx={"auto"}>
+            <Title color="brand.100">
               A comprehensive platform with features designed to help you make
               wise spending decisions
-            </Heading>
-            <Text textAlign={"center"} mt={"2rem"}>
+            </Title>
+            <Text textAlign={"center"}>
               Tailored Effectively to oversee every organization&apos;s spending
               culture and maintain a strong financial position
             </Text>
           </VStack>
           <HStack
             mx={"auto"}
-            flexDirection={{ base: "column", md: "row" }}
+            flexDirection={{ base: "column", lg: "row" }}
             mt={"8rem"}
             gap={"2rem"}
           >
-            <VStack w={{ base: "100%", md: "40%" }} gap={"2rem"}>
+            <Flex
+              w={{ base: "100%", lg: "40%" }}
+              flexDirection={{ base: "column", md: "row", lg: "column" }}
+              gap={"2rem"}
+            >
               <Box
                 bgImage={`url(${worker2.src})`}
                 bgSize="cover"
@@ -70,7 +71,7 @@ const Feature = () => {
                 width="100%"
                 height="30rem"
                 borderRadius={"1.4rem"}
-                padding={{ base: "2rem", md: "4.4rem" }}
+                padding={{ base: "2rem", lg: "4.4rem" }}
               >
                 <Flex
                   flexDirection={"column"}
@@ -93,7 +94,7 @@ const Feature = () => {
                 width="100%"
                 height="30rem"
                 borderRadius={"1.4rem"}
-                padding={{ base: "2rem", md: "4.4rem" }}
+                padding={{ base: "2rem", lg: "4.4rem" }}
               >
                 <Flex
                   flexDirection={"column"}
@@ -108,16 +109,16 @@ const Feature = () => {
                   </Box>
                 </Flex>
               </Box>
-            </VStack>
+            </Flex>
             <Box
               bgImage={`url(${worker3.src})`}
               bgSize="cover"
               bgPosition="right"
               bgRepeat="no-repeat"
-              w={{ base: "100%", md: "60%" }}
+              w={{ base: "100%", lg: "60%" }}
               height={{ base: "40rem", md: "62rem" }}
               borderRadius={"1.4rem"}
-              padding={{ base: "2rem", md: "5rem" }}
+              padding={{ base: "2rem", lg: "5rem" }}
             >
               <Flex
                 flexDirection={"column"}
