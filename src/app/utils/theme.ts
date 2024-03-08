@@ -20,10 +20,11 @@ const avenirNext = localFont({
 
 const theme = extendTheme({
   colors: {
-    brand: { 
+    brand: {
       100: "#ffffff",
       150: "#000000",
-     
+      200: "#FFAF2E",
+      250: "#00061C",
     },
   },
   fonts: {
