@@ -13,8 +13,8 @@ const Title = ({ children, color }: TitleProps) => {
     <Heading
       color={color ?? "brand.150"}
       fontWeight={"600"}
-      fontSize={{ base: "3.5rem", md: "4rem", lg: "4.5rem" }}
-      mb={{ base: "3rem", md: "4rem" }}
+      fontSize={{ base: "3rem", md: "3.5rem", lg: "4rem" }}
+      mb= "3rem"
       w="fit-content"
       mx="auto"
       textAlign={"center"}

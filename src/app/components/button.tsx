@@ -21,6 +21,8 @@ interface BtnProps {
   fontWeight?: string;
   btnText?: string;
   btnGap?: string;
+  boxShadow?: string;
+  mt?: string;
   isIcon?: boolean;
 }
 
@@ -41,6 +43,8 @@ export const Button = ({
   isIcon,
   btnText,
   btnGap,
+  boxShadow,
+  mt
 }: BtnProps) => {
   return (
     <Box
@@ -52,14 +56,15 @@ export const Button = ({
       fontWeight={fontWeight ?? 600}
       transition={"all .3s ease-in"}
       borderRadius={borderRadius ?? "1rem"}
-      py={py ?? ".8rem"}
-      px={px ?? "1.2rem"}
+      py={py ?? "1rem"}
+      px={px ?? "2rem"}
+      mt={mt}
       onClick={onClick}
       w="fit-content"
       color={color ?? "brand.250"}
       bg={bg ?? "brand.200"}
       border={border ?? "none"}
-      boxShadow={"0px 4px 30px 0px #c1baf8b1"}
+      boxShadow={boxShadow ?? "0px 4px 30px 0px #c1baf8b1"}
     >
       <Link href={path} target="_blank">
         {children ?? (
@@ -69,8 +74,8 @@ export const Button = ({
             {isIcon && (
               <Icon
                 as={GoArrowUpRight}
-                w={10}
-                h={10}
+                w={8}
+                h={8}
                 color={iconColor ?? "brand 250"}
               />
             )}
