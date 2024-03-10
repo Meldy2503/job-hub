@@ -110,7 +110,6 @@ const Navbar = () => {
             px=".7rem"
             py=".7rem"
             bg={scrolled ? "brand.200" : "brand.100"}
-            // mt="4rem"
           />
         </Flex>
         <Box onClick={onOpen} display={{ base: "block", md: "none" }}>
@@ -118,13 +117,14 @@ const Navbar = () => {
             as={isOpen ? AiOutlineClose : GiHamburgerMenu}
             boxSize={10}
             cursor={"pointer"}
+            color={scrolled ? "brand.150" : "brand.100"}
           />
         </Box>
       </Flex>
       <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
-        <DrawerContent mt="6rem" pb="3rem" pt="1rem" bg="brand.100">
+        <DrawerContent mt="6rem" pb="5rem" pt="1rem" bg="brand.350">
           <DrawerBody>
-            <Flex direction="column" rowGap={"3rem"} align={"center"} mt="2rem">
+            <Flex direction="column" rowGap={"4rem"} align={"center"} mt="2rem">
               {navData.map((menu) => {
                 return (
                   <Box
@@ -148,8 +148,8 @@ const Navbar = () => {
                 );
               })}
             </Flex>
-            <Flex align={"center"} gap="3rem" direction={"column"}>
-              <Box mt="3rem">
+            <Flex align={"center"} gap="4rem" direction={"column"}>
+              <Box mt="4rem">
                 <Link href="/">Sign in</Link>
               </Box>
               <Button

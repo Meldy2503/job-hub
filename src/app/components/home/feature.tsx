@@ -18,7 +18,7 @@ const Feature = () => {
           position={"absolute"}
           top={-1}
           left={"15%"}
-          borderTop="50px solid white"
+          borderTop="50px solid #F0F5FF"
           borderLeft="50px solid transparent"
           borderRight="50px solid transparent"
         />
@@ -28,7 +28,7 @@ const Feature = () => {
           position={"absolute"}
           bottom={-1}
           left={"15%"}
-          borderBottom="50px solid white"
+          borderBottom="50px solid  white"
           borderLeft="50px solid transparent"
           borderRight="50px solid transparent"
         />

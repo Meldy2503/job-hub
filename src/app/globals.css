@@ -41,3 +41,58 @@ a {
     transform: translateY(0);
   }
 }
+
+/* .slick-slide {
+  transform: scale(0.8);
+  transition: transform 0.4s ease-in-out;
+  padding: 40px 0;
+}
+
+.slick-center {
+  transform: scale(1.15);
+  position: relative;
+  z-index: 1;
+} */
+
+/* .slick-center::before {
+  content: "";
+  position: absolute;
+  top: 2.8rem;
+  left: -3rem;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  background-image: url("./assets/images/right-quote.svg");
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.slick-center::after {
+  content: "";
+  position: absolute;
+  top: 3.1rem;
+  right: -3rem;
+  height: 7.8rem;
+  width: 7.8rem;
+  border-radius: 50%;
+  background-image: url("./assets/images/left-quote.svg");
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 100;
+} */
+
+.slick-slide div {
+  margin: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .slick-slide {
+    transform: scale(1);
+    padding: 20px 0;
+  }
+
+  .slick-center {
+    transform: scale(1);
+  }
+}
