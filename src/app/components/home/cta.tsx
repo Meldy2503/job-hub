@@ -14,15 +14,15 @@ const Cta = () => {
         justifyContent={"space-between"}
         w={"100%"}
         boxShadow={"0px 4px 30px 0px #C1BAF8B2"}
-        py={{ base: "4rem", lg: "6rem" }}
+        py="4rem"
         px={{ base: "2rem", sm: "4rem", lg: "6rem" }}
         borderRadius={"3.2rem"}
         alignItems={"center"}
         direction={{ base: "column-reverse", md: "row" }}
         gap={"5rem"}
       >
-        <Box w={{ base: "100%", md: "50%" }}>
-          <Text fontSize={{ base: "1.8rem", lg: "2rem" }}>
+        <Box w={{ base: "100%", md: "55%" }}>
+          <Text fontSize="1.6rem">
             Trusted by over a hundred organisation across the globe
           </Text>
           <Box pos={"relative"}>
@@ -31,8 +31,7 @@ const Cta = () => {
             </Box>
             <Heading
               fontWeight={500}
-              fontSize={{ base: "3rem", lg: "4rem" }}
-              // w={{ base: "100%", md: "90%" }}
+              fontSize={{ base: "3rem", xl: "4rem" }}
               mt={"4.8rem"}
               mb={"4rem"}
             >
@@ -42,7 +41,7 @@ const Cta = () => {
             <Button path="/jobs" btnText="Get started" isIcon />
           </Box>
         </Box>
-        <Flex w={{ base: "100%", md: "40%" }} justifyContent={"center"}>
+        <Flex w={{ base: "100%", md: "37%" }} justifyContent={"center"}>
           <Image
             src={ring}
             alt={"ring"}

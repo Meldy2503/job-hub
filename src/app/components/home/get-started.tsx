@@ -15,7 +15,7 @@ import Image from "next/image";
 
 const GetStarted = () => {
   return (
-    <Wrapper>
+    <Wrapper bg='brand.350'>
       <HStack>
         <Title>Get started as</Title>
       </HStack>
