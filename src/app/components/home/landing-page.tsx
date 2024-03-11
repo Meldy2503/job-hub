@@ -20,52 +20,46 @@ const LandingPage = () => {
         borderLeft="50px solid transparent"
         zIndex={10}
       />
-      <Box>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="./../assets/images/bg-image.webp"
-          style={{
-            minWidth: "100%",
-            minHeight: "100%",
-          }}
-        >
-          {/* <source src="/videos/bg-video2.mp4" type="video/mp4" /> */}
-          {/* <source src="/videos/bg-video3.webm" type="video/webm" />  */}
-          <source src="/videos/bg-video.mp4" type="video/mp4" />
-          <source src="/videos/bg-video1.webm" type="video/webm" />
-          Your browser is not supported!
-        </video>
-      </Box>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="./../assets/images/bg-image.webp"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
+      >
+        <source src="/videos/bg-video.mp4" type="video/mp4" />
+        <source src="/videos/bg-video1.webm" type="video/webm" />
+        Your browser is not supported!
+      </video>
       <Box
         w="100%"
         h="100%"
-        position={"absolute"}
-        top={"0"}
-        right={"0"}
+        position="absolute"
+        top="0"
+        right="0"
         zIndex={5}
         className="bg"
       >
         <Flex
-          maxWidth={"1280px"}
+          maxWidth="1280px"
           color="brand.100"
           mx="auto"
-          justify={"center"}
-          align={"center"}
+          align="center"
           w="90%"
           h="100%"
         >
-          <Flex direction={"column"} w={{ base: "100%", md: "80%", lg: "50%" }}>
-            <Heading fontSize={isMobile ? "4rem" : "6rem"} fontWeight="600">
-              <span> A software embedded with features for</span>
-            
-
+          <Flex direction="column" w={{ base: "100%", md: "80%", lg: "50%" }}>
+            <Heading fontSize={isMobile ? "3rem" : "6rem"} fontWeight="600">
+              A software embedded with features for
               <span
                 style={{
                   color: "#FFAF2E",
-                  fontSize: isMobile ? "4rem" : "6rem",
+                  fontSize: isMobile ? "3rem" : "6rem",
                 }}
               >
                 <Typewriter
@@ -77,13 +71,13 @@ const LandingPage = () => {
                 />
               </span>
             </Heading>
-          
+
             <Flex
               gap="2rem"
-              fontWeight={"thin"}
+              fontWeight="thin"
               color="brand.300"
               mt="2rem"
-              flexWrap={"wrap"}
+              flexWrap="wrap"
             >
               <Text>RELIABLE</Text> |<Text>COMPREHENSIVE </Text> |
               <Text>EASY TO USE </Text>
@@ -93,13 +87,9 @@ const LandingPage = () => {
               btnText="View Jobs"
               isIcon
               boxShadow="none"
-              mt="4rem"
+              mt={isMobile ? "2rem" : "4rem"}
             />
           </Flex>
-          <Box
-            w={{ base: "0", md: "20%", lg: "50%" }}
-            display={{ base: "none", md: "block" }}
-          />
         </Flex>
       </Box>
     </Box>
