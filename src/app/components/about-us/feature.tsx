@@ -19,7 +19,11 @@ const Feature = () => {
         <Text fontSize={"1.8rem"} textAlign={"center"}>
           JOB HUB FOR EMPLOYEES
         </Text>
-        <Text textAlign={"center"} maxW={"90rem"} fontSize={"5rem"}>
+        <Text
+          textAlign={"center"}
+          maxW={"90rem"}
+          fontSize={{ base: "3.5rem", md: "5rem" }}
+        >
           efficiently request for items, authorize, and manage purchases within
           an organization
         </Text>
