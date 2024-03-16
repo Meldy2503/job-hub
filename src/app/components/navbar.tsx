@@ -66,7 +66,11 @@ const Navbar = () => {
               cursor: "pointer",
             }}
           />
-          <Text fontSize="1.6rem" fontWeight={"500"}>
+          <Text
+            fontSize="1.6rem"
+            fontWeight={"500"}
+            color={scrolled ? "brand.150" : "brand.100"}
+          >
             jobHub
           </Text>
         </HStack>
