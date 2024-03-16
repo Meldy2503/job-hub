@@ -108,3 +108,36 @@ export const testimonialData = [
     title: "Operations Manager",
   },
 ];
+
+export const FaqData = [
+  {
+    question: "How do I search for jobs?",
+    answer:
+      "To search for jobs, use the search bar on the homepage and enter keywords related to the type of job you are looking for. You can also use filters to narrow down your search results.",
+  },
+  {
+    question: "Can I save job listings?",
+    answer:
+      'Yes, you can save job listings by clicking on the "Save" button next to the job posting. You can view your saved jobs in your profile.',
+  },
+  {
+    question: "How do I apply for a job?",
+    answer:
+      'To apply for a job, click on the "Apply Now" button on the job posting and follow the instructions provided by the employer. Some employers may require you to submit your resume and cover letter online.',
+  },
+  {
+    question: "What should I include in my profile?",
+    answer:
+      "In your profile, you should include information about your education, work experience, skills, and any other relevant details that will help employers understand your qualifications.",
+  },
+  {
+    question: "Can I edit my application after submitting it?",
+    answer:
+      "Once you have submitted your application, you may not be able to edit it. However, you can withdraw your application and submit a new one if necessary.",
+  },
+  {
+    question: "How do I contact support?",
+    answer:
+      "If you need assistance or have any questions, you can contact our support team by sending an email to support@example.com. We will respond to your inquiry as soon as possible.",
+  },
+];
