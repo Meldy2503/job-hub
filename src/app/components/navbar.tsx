@@ -89,7 +89,7 @@ const Navbar = () => {
                   handlecurrentMenu(link.id);
                 }}
               >
-                <Link href={link.id}>{link.name}</Link>
+                <Link href={link.path}>{link.name}</Link>
               </Box>
             );
           })}

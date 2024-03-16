@@ -1,9 +1,14 @@
-import React from 'react'
+// import Wrapper from "@/app/components/wrapper";
+import Hero from "@/app/components/about-us/hero";
+import Navbar from "@/app/components/navbar";
 
 const AboutUs = () => {
   return (
-    <div>AboutUs</div>
-  )
-}
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
+};
 
-export default AboutUs
+export default AboutUs;
