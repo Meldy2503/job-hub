@@ -12,7 +12,6 @@ const Feature = () => {
       width="100%"
       height="75rem"
       padding={{ base: "2rem", lg: "4.4rem" }}
-      zIndex={10}
       placeItems={"center"}
     >
       <Box>
