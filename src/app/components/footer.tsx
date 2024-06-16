@@ -19,7 +19,7 @@ const Footer = () => {
     <Box position={"relative"} overflow={"hidden"}>
       <Image
         src={FooterIcon}
-        alt="bbb"
+        alt="footer background image"
         height={1100}
         width={1100}
         style={{
@@ -40,6 +40,7 @@ const Footer = () => {
           gap="5rem"
           borderBottom="1px solid #d0d0d0"
           color="brand.100"
+          align={"center"}
         >
           <Box>
             <Flex align={"center"}>
@@ -51,7 +52,6 @@ const Footer = () => {
                   width={65}
                 />
               </Link>
-
               <Text
                 fontSize="1.6rem"
                 fontWeight={"800"}
@@ -76,36 +76,20 @@ const Footer = () => {
           </Box>
 
           <VStack gap="2rem" align={"flex-start"}>
-            {footerNavLinksA.map((item, i) => (
+            {footerNavLinksA.map((item) => (
               <HStack key={item.title} gap="1rem">
                 <Link href={item.link} style={{ color: "#fff" }}>
                   {item.title}
                 </Link>
-                <Box
-                  w={"0.4rem"}
-                  h={"0.4rem"}
-                  mx={"0.5rem"}
-                  bg="brand.600"
-                  borderRadius={"50%"}
-                  display={i === 5 ? "none" : "inline-block"}
-                />
               </HStack>
             ))}
           </VStack>
           <VStack gap="2rem" align={"flex-start"}>
-            {footerNavLinksB.map((item, i) => (
+            {footerNavLinksB.map((item) => (
               <HStack key={item.title} gap="1rem">
                 <Link href={item.link} style={{ color: "#fff" }}>
                   {item.title}
                 </Link>
-                <Box
-                  w={"0.4rem"}
-                  h={"0.4rem"}
-                  mx={"0.5rem"}
-                  bg="brand.600"
-                  borderRadius={"50%"}
-                  display={i === 5 ? "none" : "inline-block"}
-                />
               </HStack>
             ))}
           </VStack>

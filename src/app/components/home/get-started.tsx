@@ -27,10 +27,12 @@ interface BannerProps {
 const Banner = ({ flexDir, children, src, title, path }: BannerProps) => {
   return (
     <HStack
-      gap={"3rem"}
+      gap={"2.5rem"}
       flexDir={{ base: "column", md: flexDir || "row-reverse" }}
+      justify={"space-between"}
+      mt={{base: '0', md: '7rem'}}
     >
-      <Box w={{ base: "100%", md: "49%" }}>
+      <Box w={{ base: "100%", md: "45%" }}>
         <Image
           src={src}
           alt={src === employee ? "employee" : "employer"}
@@ -43,8 +45,8 @@ const Banner = ({ flexDir, children, src, title, path }: BannerProps) => {
           }}
         />
       </Box>
-      <Box w={{ base: "100%", md: "49%" }}>
-        <Heading fontSize={"3rem"} mb={"3rem"}>
+      <Box w={{ base: "100%", md: "45%" }}>
+        <Heading fontSize={{base:'2.7rem', md: '3rem'}} mb={"3rem"}>
           {title}
         </Heading>
         <Box mb={"3rem"}>{children}</Box>
@@ -57,44 +59,45 @@ const Banner = ({ flexDir, children, src, title, path }: BannerProps) => {
 const GetStarted = () => {
   return (
     <Wrapper bg="brand.350">
-      <HStack>
         <Title>Get started as</Title>
-      </HStack>
       <Banner
         title="A Job Seeker"
         path="/employee"
         flexDir={"row"}
         src={employee}
       >
-        <Text my={"2rem"} fontSize={"2.4rem"}>
+        <Text my={"2rem"} fontSize={"1.8rem"} >
           Sign up now to access thrilling features and unlock exciting
           opportunities. Enhance your profile by uploading your resume and pave
           the way for a successful journey!
         </Text>
         <UnorderedList>
-          <ListItem fontSize={"2rem"}>
+          <Flex direction={'column'} gap='1rem'>
+
+          <ListItem>
             Access to a wide range of job opportunities
           </ListItem>
-          <ListItem fontSize={"2rem"}>Upload your resume</ListItem>
-          <ListItem fontSize={"2rem"}>Get updates on job openings</ListItem>
-          <ListItem fontSize={"2rem"}>
+          <ListItem>Upload your resume</ListItem>
+          <ListItem>Get updates on job openings</ListItem>
+          <ListItem>
             Get notifications on job openings
           </ListItem>
+          </Flex>
         </UnorderedList>
       </Banner>
-      <Spacer my={"14rem"} />
+      <Spacer my={{base: '8rem', md: '14rem'}} />
       <Banner title="An Employer" src={employer} path="/employer">
         <Flex gap={"2rem"} flexDir={"column"}>
           <Box>
             <Heading>Register an Account </Heading>
-            <Text fontSize={"2rem"} mt={"0.7rem"}>
+            <Text mt={"0.8rem"}>
               Embark on your hiring journey by creating an account for access to
               a diverse pool of top-tier candidates.
             </Text>{" "}
           </Box>
           <Box>
             <Heading>Profile Setup</Heading>{" "}
-            <Text fontSize={"2rem"} mt={"0.7rem"}>
+            <Text mt={"0.8rem"}>
               Enhance your hiring process by setting up your profile. Connect
               with candidates who possess proven records of experience and
               expertise.
@@ -102,7 +105,7 @@ const GetStarted = () => {
           </Box>
           <Box>
             <Heading>Job Posting</Heading>{" "}
-            <Text fontSize={"2rem"} mt={"0.7rem"}>
+            <Text mt={"0.8rem"}>
               Broaden your reach by sharing a job post. Reach out to a vast pool
               of over a thousand applicants.
             </Text>
