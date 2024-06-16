@@ -1,11 +1,12 @@
 "use client";
 
-import FooterIcon from "@/app/assets/images/footer-icon.svg";
+import FooterIcon from "@/assets/images/footer-icon.svg";
 import { Box, Flex, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
+import logoWhite from "@/assets/images/logo-white.svg";
 import {
   footerData,
   footerNavLinksA,
@@ -18,7 +19,7 @@ const Footer = () => {
     <Box position={"relative"} overflow={"hidden"}>
       <Image
         src={FooterIcon}
-        alt="bbb"
+        alt="footer background image"
         height={1100}
         width={1100}
         style={{
@@ -32,61 +33,63 @@ const Footer = () => {
       <Wrapper bg="brand.400" py="0">
         <Flex
           justify={"space-between"}
-          pt={"8rem"}
+          pt={"6rem"}
           pb={"5rem"}
           flexWrap={"wrap"}
           fontWeight={"400"}
           gap="5rem"
           borderBottom="1px solid #d0d0d0"
           color="brand.100"
+          align={"center"}
         >
           <Box>
-            <Link href="/">
-              <Image
-                src="/assets/images/Primary-Logo-Green-and-white-on-transparent1.png"
-                alt="footer image"
-                height={100}
-                width={100}
-              />
-            </Link>
-            <Flex fontSize={"2rem"} color={"brand.600"} gap={5}>
-              <BsTwitter />
-              <BiLogoLinkedin />
-              <BsInstagram />
+            <Flex align={"center"}>
+              <Link href="/">
+                <Image
+                  src={logoWhite}
+                  alt="job hub logo"
+                  height={50}
+                  width={65}
+                />
+              </Link>
+              <Text
+                fontSize="1.6rem"
+                fontWeight={"800"}
+                letterSpacing={"0.3rem"}
+                color={"brand.100"}
+              >
+                JOBHUB
+              </Text>
+            </Flex>
+
+            <Flex fontSize={"2rem"} color={"brand.600"} gap={5} mt="2rem">
+              <Box bg="brand.450" borderRadius={"50%"} p="1rem">
+                <BsTwitter />
+              </Box>
+              <Box bg="brand.450" borderRadius={"50%"} p="1rem">
+                <BiLogoLinkedin />
+              </Box>
+              <Box bg="brand.450" borderRadius={"50%"} p="1rem">
+                <BsInstagram />
+              </Box>
             </Flex>
           </Box>
 
           <VStack gap="2rem" align={"flex-start"}>
-            {footerNavLinksA.map((item, i) => (
+            {footerNavLinksA.map((item) => (
               <HStack key={item.title} gap="1rem">
                 <Link href={item.link} style={{ color: "#fff" }}>
                   {item.title}
                 </Link>
-                <Box
-                  w={"0.4rem"}
-                  h={"0.4rem"}
-                  mx={"0.5rem"}
-                  bg="brand.600"
-                  borderRadius={"50%"}
-                  display={i === 5 ? "none" : "inline-block"}
-                />
               </HStack>
             ))}
           </VStack>
           <VStack gap="2rem" align={"flex-start"}>
-            {footerNavLinksB.map((item, i) => (
+            {footerNavLinksB.map((item) => (
               <HStack key={item.title} gap="1rem">
                 <Link href={item.link} style={{ color: "#fff" }}>
                   {item.title}
                 </Link>
-                <Box
-                  w={"0.4rem"}
-                  h={"0.4rem"}
-                  mx={"0.5rem"}
-                  bg="brand.600"
-                  borderRadius={"50%"}
-                  display={i === 5 ? "none" : "inline-block"}
-                />
               </HStack>
             ))}
           </VStack>
@@ -118,11 +121,11 @@ const Footer = () => {
           align="center"
           direction={"column"}
         >
-          <Text fontSize="1.7rem" fontWeight={"500"} color="brand.600">
-            Powered by jobHub
+          <Text fontWeight={"500"} color="brand.600">
+            Powered by JOBHUB
           </Text>
-          <Text fontSize="1.7rem" fontWeight={"500"} color="brand.600">
-            © 2024 jobHub. All rights reserved.
+          <Text fontWeight={"500"} color="brand.600" mt="1rem">
+            © 2024. All rights reserved.
           </Text>
         </Flex>
       </Box>

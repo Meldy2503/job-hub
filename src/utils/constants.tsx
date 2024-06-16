@@ -1,8 +1,8 @@
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
-import review from "@/app/assets/images/review.webp";
-import review1 from "@/app/assets/images/review1.webp";
-import review2 from "@/app/assets/images/review2.webp";
+import review from "@/assets/images/review.webp";
+import review1 from "@/assets/images/review1.webp";
+import review2 from "@/assets/images/review2.webp";
 
 export const navData = [
   {
@@ -13,18 +13,18 @@ export const navData = [
   {
     id: "2",
     name: "Jobs",
-    path: "/pages/jobs",
+    path: "/jobs",
   },
   {
     id: "3",
     name: "About us",
-    path: "/pages/about-us",
+    path: "/about-us",
   },
 
   {
     id: "4",
     name: "Contact us",
-    path: "/pages/contact-us",
+    path: "/contact-us",
   },
 ];
 
@@ -46,17 +46,17 @@ export const footerNavLinksA = [
   },
   {
     title: "Jobs",
-    link: "/pages/jobs",
+    link: "/jobs",
   },
   {
     title: "About us",
-    link: "/pages/blogs",
+    link: "/blogs",
   },
 ];
 export const footerNavLinksB = [
   {
     title: "Get Started",
-    link: "/pages/auth/register",
+    link: "/auth/register",
   },
   {
     title: "Terms of Services",

@@ -1,11 +1,11 @@
 import React from "react";
-import { Button } from "@/app/components/button";
+import { Button } from "@/components/button";
 import { Box, Divider, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import staff4 from "@/app/assets/images/staff4.webp";
-import staff3 from "@/app/assets/images/staff3.webp";
-import staff2 from "@/app/assets/images/staff2.webp";
-import staff1 from "@/app/assets/images/staff1.webp";
+import staff4 from "@/assets/images/staff4.webp";
+import staff3 from "@/assets/images/staff3.webp";
+import staff2 from "@/assets/images/staff2.webp";
+import staff1 from "@/assets/images/staff1.webp";
 
 const Hero = () => {
   return (

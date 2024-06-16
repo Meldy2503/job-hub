@@ -3,12 +3,11 @@
 import React from "react";
 import Wrapper from "../wrapper";
 import Image from "next/image";
-import hermes from "@/app/assets/images/hermes.svg";
-import starks from "@/app/assets/images/starks.svg";
-import sparkles from "@/app/assets/images/sparkles.svg";
-import elohq from "@/app/assets/images/elohq.svg";
-import starplug from "@/app/assets/images/starplug.svg";
-import sblend from "@/app/assets/images/sblend.svg";
+import hermes from "@/assets/images/hermes.svg";
+import sparkles from "@/assets/images/sparkles.svg";
+import elohq from "@/assets/images/elohq.svg";
+import starplug from "@/assets/images/starplug.svg"
+import sblend from "@/assets/images/sblend.svg";
 import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import Title from "../heading";
 

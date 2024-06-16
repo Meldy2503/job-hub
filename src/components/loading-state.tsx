@@ -2,7 +2,7 @@
 
 import { Center } from "@chakra-ui/react";
 import Image from "next/image";
-import loadingIcon from "../assets/images/loading-icon.svg";
+import loadingIcon from "@/assets/images/loading-icon.svg";
 
 const LoadingIcon = () => {
   return (

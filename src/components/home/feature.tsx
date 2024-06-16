@@ -1,10 +1,10 @@
 import React from "react";
 import Wrapper from "../wrapper";
 import { Box, Flex, HStack, Heading, Text, VStack } from "@chakra-ui/react";
-import worker1 from "@/app/assets/images/worker.webp";
-import worker2 from "@/app/assets/images/worker6.webp";
-import worker3 from "@/app/assets/images/worker4.webp";
-import overlay from "@/app/assets/images/bg-overlay.webp";
+import worker1 from "@/assets/images/worker.webp";
+import worker2 from "@/assets/images/worker6.webp";
+import worker3 from "@/assets/images/worker4.webp";
+import overlay from "@/assets/images/bg-overlay.webp";
 import Title from "../heading";
 import Image from "next/image";
 

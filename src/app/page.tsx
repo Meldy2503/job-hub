@@ -1,8 +1,7 @@
-import HomePage from "./components/home";
+import HomePage from "../components/home";
 
+const Home = () => {
+  return <HomePage />;
+};
 
-export default function Home() {
-  return (
-   <HomePage />
-  );
-}
+export default Home;

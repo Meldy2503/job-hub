@@ -8,17 +8,18 @@ import {
   DrawerBody,
   DrawerContent,
   Flex,
-  HStack,
   Icon,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
-import { FaPlay } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { navData } from "../utils/constants";
 import { Button } from "./button";
+import logoWhite from "@/assets/images/logo-white.svg";
+import logoYellow from "@/assets/images/logo-yellow.svg";
+import Image from "next/image";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -58,22 +59,23 @@ const Navbar = () => {
         align={"center"}
         color="brand.100"
       >
-        <HStack>
-          <FaPlay
-            style={{
-              fontSize: "2rem",
-              color: "#ff5621",
-              cursor: "pointer",
-            }}
+        <Flex align={"flex-end"}>
+          <Image
+            src={scrolled ? logoYellow : logoWhite}
+            alt="job hub logo"
+            height={20}
+            width={40}
           />
+
           <Text
             fontSize="1.6rem"
-            fontWeight={"500"}
-            color={scrolled ? "brand.150" : "brand.100"}
+            fontWeight={"800"}
+            letterSpacing={"0.3rem"}
+            color={scrolled ? "brand.400" : "brand.100"}
           >
-            jobHub
+            JOBHUB
           </Text>
-        </HStack>
+        </Flex>
         <Flex gap="3rem" display={{ base: "none", md: "flex" }}>
           {navData.map((link) => {
             return (

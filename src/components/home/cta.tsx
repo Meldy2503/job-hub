@@ -2,10 +2,9 @@ import React from "react";
 import Wrapper from "../wrapper";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import vector from "@/app/assets/images/vector.svg";
-import ring from "@/app/assets/images/ring.svg";
+import vector from "@/assets/images/vector.svg";
+import ring from "@/assets/images/ring.svg";
 import { Button } from "../button";
-// import { LinkBtn } from "@/app/utils/Button";
 
 const Cta = () => {
   return (
