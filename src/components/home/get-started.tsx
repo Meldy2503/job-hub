@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../wrapper";
-import employee from "@/app/assets/images/employee1.webp";
-import employer from "@/app/assets/images/interview.webp";
+import employee from "@/assets/images/employee1.webp";
+import employer from "@/assets/images/interview.webp";
 import {
   Box,
   Flex,
@@ -90,14 +90,14 @@ const GetStarted = () => {
         <Flex gap={"2rem"} flexDir={"column"}>
           <Box>
             <Heading>Register an Account </Heading>
-            <Text mt={"0.8rem"}>
+            <Text mt={"1rem"}>
               Embark on your hiring journey by creating an account for access to
               a diverse pool of top-tier candidates.
             </Text>{" "}
           </Box>
           <Box>
             <Heading>Profile Setup</Heading>{" "}
-            <Text mt={"0.8rem"}>
+            <Text mt={"1rem"}>
               Enhance your hiring process by setting up your profile. Connect
               with candidates who possess proven records of experience and
               expertise.
@@ -105,7 +105,7 @@ const GetStarted = () => {
           </Box>
           <Box>
             <Heading>Job Posting</Heading>{" "}
-            <Text mt={"0.8rem"}>
+            <Text mt={"1rem"}>
               Broaden your reach by sharing a job post. Reach out to a vast pool
               of over a thousand applicants.
             </Text>

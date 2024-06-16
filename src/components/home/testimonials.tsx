@@ -1,8 +1,8 @@
 "use client";
 
-import Title from "@/app/components/heading";
-import Wrapper from "@/app/components/wrapper";
-import { testimonialData } from "@/app/utils/constants";
+import Title from "@/components/heading";
+import Wrapper from "@/components/wrapper";
+import { testimonialData } from "@/utils/constants";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Slider from "react-slick";

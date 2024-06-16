@@ -1,12 +1,12 @@
 "use client";
 
-import FooterIcon from "@/app/assets/images/footer-icon.svg";
+import FooterIcon from "@/assets/images/footer-icon.svg";
 import { Box, Flex, HStack, Heading, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
-import logoWhite from "../assets/images/logo-white.svg";
+import logoWhite from "@/assets/images/logo-white.svg";
 import {
   footerData,
   footerNavLinksA,

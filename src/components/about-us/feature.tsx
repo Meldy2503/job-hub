@@ -1,6 +1,6 @@
 import { Box, Grid, Text } from "@chakra-ui/react";
 import React from "react";
-import team from "@/app/assets/images/team.webp";
+import team from "@/assets/images/team.webp";
 
 const Feature = () => {
   return (

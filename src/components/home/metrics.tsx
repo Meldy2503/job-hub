@@ -1,4 +1,4 @@
-import map from "@/app/assets/images/metrics.webp";
+import map from "@/assets/images/metrics.webp";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Title from "../heading";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../wrapper";
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import team2 from "@/app/assets/images/team2.webp";
+import team2 from "@/assets/images/team2.webp";
 import Image from "next/image";
 import { Button } from "../button";
 

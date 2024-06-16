@@ -4,8 +4,8 @@ import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import theme from "./utils/theme";
-import LoadingIcon from "./components/loading-state";
+import theme from "@/utils/theme";
+import LoadingIcon from "@/components/loading-state";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);

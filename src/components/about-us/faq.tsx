@@ -1,6 +1,6 @@
 "use client";
 
-import { FaqData } from "@/app/utils/constants";
+import { FaqData } from "@/utils/constants";
 import {
   Accordion,
   AccordionItem,

@@ -17,8 +17,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { navData } from "../utils/constants";
 import { Button } from "./button";
-import logoWhite from "../assets/images/logo-white.svg";
-import logoYellow from "../assets/images/logo-yellow.svg";
+import logoWhite from "@/assets/images/logo-white.svg";
+import logoYellow from "@/assets/images/logo-yellow.svg";
 import Image from "next/image";
 
 const Navbar = () => {
