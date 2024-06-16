@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
+import logoWhite from "../assets/images/logo-white.svg";
 import {
   footerData,
   footerNavLinksA,
@@ -32,7 +33,7 @@ const Footer = () => {
       <Wrapper bg="brand.400" py="0">
         <Flex
           justify={"space-between"}
-          pt={"8rem"}
+          pt={"6rem"}
           pb={"5rem"}
           flexWrap={"wrap"}
           fontWeight={"400"}
@@ -41,18 +42,36 @@ const Footer = () => {
           color="brand.100"
         >
           <Box>
-            <Link href="/">
-              <Image
-                src="/assets/images/Primary-Logo-Green-and-white-on-transparent1.png"
-                alt="footer image"
-                height={100}
-                width={100}
-              />
-            </Link>
-            <Flex fontSize={"2rem"} color={"brand.600"} gap={5}>
-              <BsTwitter />
-              <BiLogoLinkedin />
-              <BsInstagram />
+            <Flex align={"center"}>
+              <Link href="/">
+                <Image
+                  src={logoWhite}
+                  alt="job hub logo"
+                  height={50}
+                  width={65}
+                />
+              </Link>
+
+              <Text
+                fontSize="1.6rem"
+                fontWeight={"800"}
+                letterSpacing={"0.3rem"}
+                color={"brand.100"}
+              >
+                JOBHUB
+              </Text>
+            </Flex>
+
+            <Flex fontSize={"2rem"} color={"brand.600"} gap={5} mt="2rem">
+              <Box bg="brand.450" borderRadius={"50%"} p="1rem">
+                <BsTwitter />
+              </Box>
+              <Box bg="brand.450" borderRadius={"50%"} p="1rem">
+                <BiLogoLinkedin />
+              </Box>
+              <Box bg="brand.450" borderRadius={"50%"} p="1rem">
+                <BsInstagram />
+              </Box>
             </Flex>
           </Box>
 
@@ -118,11 +137,11 @@ const Footer = () => {
           align="center"
           direction={"column"}
         >
-          <Text fontSize="1.7rem" fontWeight={"500"} color="brand.600">
-            Powered by jobHub
+          <Text fontWeight={"500"} color="brand.600">
+            Powered by JOBHUB
           </Text>
-          <Text fontSize="1.7rem" fontWeight={"500"} color="brand.600">
-            © 2024 jobHub. All rights reserved.
+          <Text fontWeight={"500"} color="brand.600" mt="1rem">
+            © 2024. All rights reserved.
           </Text>
         </Flex>
       </Box>
