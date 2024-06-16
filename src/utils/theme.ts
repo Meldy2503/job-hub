@@ -5,14 +5,14 @@ import { Poppins } from "next/font/google";
 const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400"],
+  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 const avenirNext = localFont({
   src: [
     {
       path: "../assets/fonts/AvenirNextLTPro-Regular.otf",
-      weight: "400",
+      weight: "400, 500, 700, 800, 900",
     },
   ],
   variable: "--font-poppins",

@@ -43,24 +43,24 @@ const Footer = () => {
           align={"center"}
         >
           <Box>
-            <Flex align={"center"}>
               <Link href="/">
+            <Flex align={"center"}>
                 <Image
                   src={logoWhite}
                   alt="job hub logo"
                   height={50}
                   width={65}
                 />
-              </Link>
               <Text
                 fontSize="1.6rem"
                 fontWeight={"800"}
                 letterSpacing={"0.3rem"}
                 color={"brand.100"}
-              >
+                >
                 JOBHUB
               </Text>
             </Flex>
+                </Link>
 
             <Flex fontSize={"2rem"} color={"brand.600"} gap={5} mt="2rem">
               <Box bg="brand.450" borderRadius={"50%"} p="1rem">

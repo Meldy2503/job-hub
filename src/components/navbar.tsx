@@ -59,23 +59,25 @@ const Navbar = () => {
         align={"center"}
         color="brand.100"
       >
-        <Flex align={"flex-end"}>
-          <Image
-            src={scrolled ? logoYellow : logoWhite}
-            alt="job hub logo"
-            height={20}
-            width={40}
-          />
+        <Link href="/">
+          <Flex align={"flex-end"}>
+            <Image
+              src={scrolled ? logoYellow : logoWhite}
+              alt="job hub logo"
+              height={20}
+              width={40}
+            />
 
-          <Text
-            fontSize="1.6rem"
-            fontWeight={"800"}
-            letterSpacing={"0.3rem"}
-            color={scrolled ? "brand.400" : "brand.100"}
-          >
-            JOBHUB
-          </Text>
-        </Flex>
+            <Text
+              fontSize="1.6rem"
+              fontWeight={"800"}
+              letterSpacing={"0.3rem"}
+              color={scrolled ? "brand.400" : "brand.100"}
+            >
+              JOBHUB
+            </Text>
+          </Flex>
+        </Link>
         <Flex gap="3rem" display={{ base: "none", md: "flex" }}>
           {navData.map((link) => {
             return (
