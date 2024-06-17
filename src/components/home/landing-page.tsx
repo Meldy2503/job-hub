@@ -25,7 +25,7 @@ const LandingPage = () => {
         muted
         loop
         playsInline
-        poster="./../assets/images/bg-image.webp"
+        poster={"../../assets/images/bg-image.webp"}
         style={{
           width: "100%",
           height: "100%",
