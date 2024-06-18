@@ -68,7 +68,11 @@ const Feature = () => {
             A comprehensive platform with features designed to help you make
             wise spending decisions
           </Title>
-          <Text textAlign={"center"} w={{ base: "100%", md: "75%", xl: '60%' }} color={"brand.300"}>
+          <Text
+            textAlign={"center"}
+            w={{ base: "100%", md: "75%", xl: "60%" }}
+            color={"brand.300"}
+          >
             Tailored Effectively to oversee every organization&apos;s spending
             culture and maintain a strong financial position
           </Text>
@@ -101,7 +105,9 @@ const Feature = () => {
                 justifyContent={"flex-end"}
               >
                 <Box>
-                  <Text mb={".5rem"} fontSize={"1.5rem"}>JOB HUB FOR EMPLOYEES</Text>
+                  <Text mb={".5rem"} fontSize={"1.5rem"}>
+                    JOB HUB FOR EMPLOYEES
+                  </Text>
                   <Heading fontSize={"2.6rem"} fontWeight={500}>
                     Enhances collaboration and transparency
                   </Heading>
@@ -118,7 +124,6 @@ const Feature = () => {
               borderRadius={"1.4rem"}
               padding={{ base: "2rem", lg: "4.4rem" }}
               zIndex={10}
-
             >
               <Flex
                 flexDirection={"column"}
@@ -126,7 +131,9 @@ const Feature = () => {
                 justifyContent={"flex-end"}
               >
                 <Box>
-                  <Text mb={".5rem"} fontSize={"1.5rem"}>JOB HUB FOR ORGANISATIONS</Text>
+                  <Text mb={".5rem"} fontSize={"1.5rem"}>
+                    JOB HUB FOR ORGANISATIONS
+                  </Text>
                   <Heading fontSize={"2.6rem"} fontWeight={500}>
                     Enables wise-spending decisions
                   </Heading>
@@ -135,7 +142,7 @@ const Feature = () => {
             </Box>
           </Flex>
           <Box
-             bgImage={`url(${worker3.src})`}
+            bgImage={`url(${worker3.src})`}
             bgSize="cover"
             bgPosition="right"
             bgRepeat="no-repeat"
@@ -144,16 +151,16 @@ const Feature = () => {
             borderRadius={"1.4rem"}
             padding={{ base: "2rem", lg: "5rem" }}
             zIndex={10}
-
           >
-           
             <Flex
               flexDirection={"column"}
               h={"100%"}
               justifyContent={"flex-end"}
             >
               <Box>
-                <Text mb={".5rem"} fontSize={"1.5rem"}>JOB HUB FOR EMPLOYERS</Text>
+                <Text mb={".5rem"} fontSize={"1.5rem"}>
+                  JOB HUB FOR EMPLOYERS
+                </Text>
                 <Heading
                   fontSize={{ base: "2.6rem", md: "4rem" }}
                   fontWeight={500}

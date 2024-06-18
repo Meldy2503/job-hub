@@ -7,24 +7,24 @@ const Feature = () => {
     <Grid
       bgImage={`url(${team.src})`}
       bgSize="cover"
-      bgPosition="80%"
+      bgPosition="top center"
       bgRepeat="no-repeat"
       width="100%"
-      height="75rem"
+      height="70rem"
       padding={{ base: "2rem", lg: "4.4rem" }}
       placeItems={"center"}
     >
       <Box>
-        <Text fontSize={"1.8rem"} textAlign={"center"} color={"white"}>
+        <Text fontSize={"1.8rem"} textAlign={"center"} color={"white"} mb='1rem'>
           JOB HUB FOR EMPLOYEES
         </Text>
         <Text
           textAlign={"center"}
           maxW={"90rem"}
-          fontSize={{ base: "3.5rem", md: "5rem" }}
+          fontSize={{ base: "3rem", md: "4.5rem" }}
           color={"white"}
         >
-          efficiently request for items, authorize, and manage purchases within
+          Efficiently request for items, authorize, and manage purchases within
           an organization
         </Text>
       </Box>

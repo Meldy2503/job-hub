@@ -1,16 +1,19 @@
-import React from "react";
-import { Button } from "@/components/button";
-import { Box, Divider, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
-import Image from "next/image";
-import staff4 from "@/assets/images/staff4.webp";
-import staff3 from "@/assets/images/staff3.webp";
-import staff2 from "@/assets/images/staff2.webp";
-import staff1 from "@/assets/images/staff1.webp";
+import aboutUsImage from "@/assets/images/about-us.webp";
 import particles from "@/assets/images/particles.svg";
+import { Button } from "@/components/button";
+import { Box, Divider, Flex, Heading, Text } from "@chakra-ui/react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <Flex bg={"brand.400"} pt={"12rem"} position={"relative"}>
+    <Flex
+      bg={"brand.600"}
+      pt={{ base: "11rem", md: "10rem" }}
+      pb={{ base: "0rem", md: "10rem" }}
+      position={"relative"}
+      h={{ base: "100%", md: "100%" }}
+      overflow={"hidden"}
+    >
       <Box
         position={"absolute"}
         mx={"auto"}
@@ -22,33 +25,24 @@ const Hero = () => {
         right={0}
         scale={1.5}
       >
-        <Image
-          src={particles}
-          alt={"team"}
-          width={1500}
-          height={1500}
-          style={{
-            width: "100%",
-            height: "100%",
-            borderRadius: "1.2rem",
-          }}
-        />
+        <Image src={particles} alt={"particles"} width={1500} height={800} />
       </Box>
       <Flex maxW={"1280px"} w={"95%"} mx={"auto"}>
         <Flex
-          alignItems={"center"}
           mx={"auto"}
           zIndex={10}
           flexDirection={{ base: "column", md: "row" }}
-          gap={"8rem"}
+          gap={{ base: "3rem", md: "8rem" }}
         >
-          <Box w={{ base: "90%", md: "50%" }}>
+          <Box w={{ base: "100%", md: "50%" }} mt={{ base: "0", md: "5rem" }}>
             <Heading
-              fontSize={{ base: "4rem", md: "4rem", lg: "6rem" }}
+              fontSize={{ base: "3.5rem", md: "4rem", lg: "5.5rem" }}
               color={"white"}
             >
-              We’re a fast growing start-up with
-              <Text color={"#FFC052"}>testimonials from customers</Text>
+              We’re a fast growing start-up with &nbsp;
+              <span style={{ color: "#FFC052", marginLeft: "-1rem" }}>
+                testimonials from customers
+              </span>
             </Heading>
             <Divider my={"3rem"} bg={"brand.100"} w={"60%"} />
             <Text color={"white"}>
@@ -57,78 +51,30 @@ const Hero = () => {
               manage supplier relationships.{" "}
             </Text>
             <Button
-              btnText="Request for a Demo"
+              btnText="Join Us"
               path="/get-started"
               isIcon
               bg="brand.100"
               mt="3rem"
             />
           </Box>
+          <Box w={{ base: "0%", md: "50%" }} />
           <Box
-            w={{ base: "75%", md: "50%" }}
+            w={{ base: "100%", md: "47%" }}
             py={"2rem"}
-            pl={"2rem"}
-            pr={"2rem"}
+            px={"2rem"}
             bg={"brand.100"}
-            // rounded={"1.2rem"}
+            position={{ base: "relative", md: "absolute" }}
+            right="0"
+            top={{ base: "0", md: "12rem" }}
           >
-            <Flex>
-              <Box>
-                <Box>
-                  <Image
-                    src={staff1}
-                    alt="about-us"
-                    width={500}
-                    height={500}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </Box>
-                <Spacer h={"2rem"} />
-                <Box>
-                  <Image
-                    src={staff2}
-                    alt="about-us"
-                    width={500}
-                    height={500}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </Box>
-              </Box>
-              <Box ml={"2rem"}>
-                <Image
-                  src={staff3}
-                  alt="about-us"
-                  width={500}
-                  height={500}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
-                />
-              </Box>
-            </Flex>
-            <Box mt={"2rem"} mb={"-2rem"}>
-              <Image
-                src={staff4}
-                alt="about-us"
-                width={500}
-                height={500}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </Box>
+            <Image
+              src={aboutUsImage}
+              alt="about-us"
+              width={1500}
+              height={1500}
+              quality={100}
+            />
           </Box>
         </Flex>
       </Flex>
