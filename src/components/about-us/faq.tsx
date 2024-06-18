@@ -3,17 +3,17 @@
 import { FaqData } from "@/utils/constants";
 import {
   Accordion,
-  AccordionItem,
   AccordionButton,
+  AccordionItem,
   AccordionPanel,
   Box,
   Text,
-  Divider,
 } from "@chakra-ui/react";
-import React from "react";
-import { FiPlus, FiMinus } from "react-icons/fi";
-import Wrapper from "../wrapper";
+import { FiMinus, FiPlus } from "react-icons/fi";
 import Title from "../heading";
+import Wrapper from "../wrapper";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const Faq = () => {
   return (
@@ -22,7 +22,6 @@ const Faq = () => {
         <Box mb={"8rem"}>
           <Title>Frequently Asked Questions (FAQ)</Title>
           <Text
-            fontSize={"2rem"}
             textAlign={"center"}
             w={{ base: "100%", md: "90%", lg: "70%" }}
             mx={"auto"}
@@ -39,26 +38,26 @@ const Faq = () => {
               {({ isExpanded }) => (
                 <>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton py="2.5rem">
                       <Box
                         as="span"
                         flex="1"
                         textAlign="left"
-                        fontSize={"2rem"}
+                        fontSize={"1.6rem"}
+                        pr="3rem"
                       >
                         {item.question}
                       </Box>
                       {isExpanded ? (
-                        <FiMinus fontSize="1.6rem" />
+                        <MdKeyboardArrowUp fontSize="2rem" />
                       ) : (
-                        <FiPlus fontSize="1.6rem" />
+                        <MdKeyboardArrowDown fontSize="2rem" />
                       )}
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel fontSize={"1.8rem"} mt={"3rem"} pb={4}>
+                  <AccordionPanel pb={"2rem"} color="brand.550">
                     {item.answer}
                   </AccordionPanel>
-                  <Divider my={"3rem"} bg={"#bebebe"} />
                 </>
               )}
             </AccordionItem>

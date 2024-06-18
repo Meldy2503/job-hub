@@ -16,7 +16,7 @@ import Wrapper from "./wrapper";
 
 const Footer = () => {
   return (
-    <Box position={"relative"} overflow={"hidden"}>
+    <Box position={"relative"} overflow={"hidden"} color='white'>
       <Image
         src={FooterIcon}
         alt="footer background image"
@@ -55,14 +55,13 @@ const Footer = () => {
                 fontSize="1.6rem"
                 fontWeight={"800"}
                 letterSpacing={"0.15rem"}
-                color={"brand.100"}
                 >
                 JOBHUB
               </Text>
             </Flex>
                 </Link>
 
-            <Flex fontSize={"2rem"} color={"brand.600"} gap={5} mt="2rem">
+            <Flex fontSize={"2rem"} color={"brand.100"} gap={5} mt="2rem">
               <Box bg="brand.450" borderRadius={"50%"} p="1rem">
                 <BsTwitter />
               </Box>
@@ -98,22 +97,21 @@ const Footer = () => {
             flexWrap={"wrap"}
             direction="column"
             justify={"space-between"}
-            color="brand.100"
           >
             <Heading mb="1rem" fontSize={"1.8rem"}>
               How can we help?
             </Heading>
             {footerData.map((item, index) => (
               <Flex key={index} gap="1rem" align={"center"}>
-                <Box color="brand.600">{item.icon}</Box>
-                <Text color="brand.600">{item.text}</Text>
+                <Box >{item.icon}</Box>
+                <Text >{item.text}</Text>
               </Flex>
             ))}
           </Flex>
         </Flex>
       </Wrapper>
 
-      <Box w={"100%"} py={"2rem"} color={"brand.100"} bg="brand.400">
+      <Box w={"100%"} py={"2rem"}  bg="brand.400">
         <Flex
           mx={"auto"}
           w={"90%"}
@@ -121,10 +119,10 @@ const Footer = () => {
           align="center"
           direction={"column"}
         >
-          <Text fontWeight={"500"} color="brand.600">
+          <Text fontWeight={"500"} >
             Powered by JOBHUB
           </Text>
-          <Text fontWeight={"500"} color="brand.600" mt="1rem">
+          <Text fontWeight={"500"} mt="1rem">
             © 2024. All rights reserved.
           </Text>
         </Flex>

@@ -48,9 +48,13 @@ const Banner = ({ flexDir, children, src, title, path }: BannerProps) => {
         />
       </Box>
       <Box w={{ base: "100%", md: "45%" }}>
-        <Heading fontSize={{ base: "2.7rem", md: "3rem" }} mb={"3rem"}>
+        <Text
+          fontSize={{ base: "2.7rem", md: "3rem" }}
+          mb={"2rem"}
+          fontWeight={"500"}
+        >
           {title}
-        </Heading>
+        </Text>
         <Box mb={"3rem"}>{children}</Box>
         <Button btnText="Sign Up" path={path} isIcon />
       </Box>
@@ -86,14 +90,18 @@ const GetStarted = () => {
       <Banner title="An Employer" src={employer} path="/employer">
         <Flex gap={"2rem"} flexDir={"column"}>
           <Box>
-            <Heading>Register an Account </Heading>
+            <Text fontSize={"2rem"} fontWeight={"500"}>
+              Register an Account{" "}
+            </Text>
             <Text mt={"1rem"}>
               Embark on your hiring journey by creating an account for access to
               a diverse pool of top-tier candidates.
             </Text>{" "}
           </Box>
           <Box>
-            <Heading>Profile Setup</Heading>{" "}
+            <Text fontSize={"2rem"} fontWeight={"500"}>
+              Profile Setup
+            </Text>{" "}
             <Text mt={"1rem"}>
               Enhance your hiring process by setting up your profile. Connect
               with candidates who possess proven records of experience and
@@ -101,7 +109,9 @@ const GetStarted = () => {
             </Text>{" "}
           </Box>
           <Box>
-            <Heading>Job Posting</Heading>{" "}
+            <Text fontSize={"2rem"} fontWeight={"500"}>
+              Job Posting
+            </Text>{" "}
             <Text mt={"1rem"}>
               Broaden your reach by sharing a job post. Reach out to a vast pool
               of over a thousand applicants.

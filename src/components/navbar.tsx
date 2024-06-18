@@ -64,7 +64,7 @@ const Navbar = () => {
         color="brand.100"
       >
         <Link href="/">
-          <Flex align={"flex-end"}>
+          <Flex align={"center"}>
             <Image
               src={scrolled ? logoYellow : logoWhite}
               alt="job hub logo"
@@ -82,7 +82,7 @@ const Navbar = () => {
             </Text>
           </Flex>
         </Link>
-        <Flex gap="3rem" display={{ base: "none", md: "flex" }}>
+        <Flex gap="3rem" display={{ base: "none", lg: "flex" }}>
           {navData.map((link) => {
             return (
               <Flex
@@ -112,7 +112,7 @@ const Navbar = () => {
         <Flex
           align={"center"}
           gap="2rem"
-          display={{ base: "none", md: "flex" }}
+          display={{ base: "none", lg: "flex" }}
         >
           <Box color={scrolled ? "brand.150" : "brand.100"}>
             <Link href="/">Sign in</Link>
@@ -127,7 +127,7 @@ const Navbar = () => {
             bg={scrolled ? "brand.200" : "brand.100"}
           />
         </Flex>
-        <Box onClick={onOpen} display={{ base: "block", md: "none" }}>
+        <Box onClick={onOpen} display={{ base: "block", lg: "none" }}>
           <Icon
             as={isOpen ? AiOutlineClose : GiHamburgerMenu}
             boxSize={10}
