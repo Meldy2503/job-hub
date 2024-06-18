@@ -54,7 +54,7 @@ const Footer = () => {
               <Text
                 fontSize="1.6rem"
                 fontWeight={"800"}
-                letterSpacing={"0.3rem"}
+                letterSpacing={"0.15rem"}
                 color={"brand.100"}
                 >
                 JOBHUB
