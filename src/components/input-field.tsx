@@ -23,10 +23,8 @@ interface InputProps {
   isRequired?: boolean;
   defaultValue?: string;
   register?: any;
-  fontWeight?: string;
   errorMessage?: any;
   helperText?: string;
-  _placeholder?: any;
 }
 
 const InputField = ({
@@ -40,15 +38,13 @@ const InputField = ({
   name,
   isDisabled,
   isRequired,
-  fontWeight,
   register,
   errorMessage,
   defaultValue,
-  _placeholder,
 }: InputProps) => {
   return (
     <FormControl fontSize={"1.6rem"}>
-      <FormLabel fontWeight={fontWeight ?? "bold"} fontSize={"1.5rem"}>
+      <FormLabel fontSize={"1.5rem"} fontWeight={'400'}>
         {label} {icon} {isRequired && <span style={{ color: "red" }}>*</span>}
       </FormLabel>
 
@@ -62,9 +58,9 @@ const InputField = ({
         isDisabled={isDisabled}
         isRequired={isRequired}
         defaultValue={defaultValue}
-        _placeholder={_placeholder}
+        _placeholder={{ color: "brand.500" }}
         type={type ?? "text"}
-        placeholder={placeholder}
+        placeholder={placeholder }
         style={{ ...generalStyle }}
       />
 

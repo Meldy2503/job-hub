@@ -90,12 +90,7 @@ const Navbar = () => {
                 justifyContent={"center"}
                 alignItems={"center"}
                 key={link.id}
-                color={
-                  // link.path === pathname
-                  // ? "brand.200"
-                  // :
-                  scrolled ? "brand.150" : "brand.100"
-                }
+                color={scrolled ? "brand.150" : "brand.100"}
                 _hover={{
                   color: "brand.200",
                 }}
@@ -156,7 +151,7 @@ const Navbar = () => {
                     color={currentMenu === menu.id ? "brand.200" : "brand.150"}
                   >
                     <Link
-                      href={menu.id}
+                      href={menu.path}
                       onClick={() => {
                         handlecurrentMenu(menu.id);
                         onClose();

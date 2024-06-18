@@ -2,20 +2,25 @@
 
 import { Flex, Text } from "@chakra-ui/react";
 import { Button } from "../button";
-import Title from "../heading";
 import Wrapper from "../wrapper";
 
 const Cta = () => {
   return (
     <Wrapper bg="brand.200">
-      <Flex justify={"center"} direction={"column"} align={"center"}>
-        <Title>Upload your Resume, Get Hired</Title>
+      <Flex
+        justify={"center"}
+        direction={"column"}
+        textAlign={"center"}
+        align={"center"}
+      >
+        <Text fontSize={{ base: "3.5rem", lg: "4rem" }} fontWeight={"600"}>
+          Upload your Resume, Get Hired
+        </Text>
         <Text
           fontSize={"1.8rem"}
           w={{ base: "100%", md: "50%" }}
-          textAlign={"center"}
           mb="3rem"
-          mt="-1rem"
+          mt="2rem"
         >
           Take the first step towards unlocking a host of exciting features and
           opportunities

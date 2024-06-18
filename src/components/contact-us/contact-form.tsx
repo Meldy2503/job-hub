@@ -63,30 +63,24 @@
 // import { InputElement } from "@/app/utils/input-element";
 // import Text from "@/app/utils/text";
 // import Wrapper from "@/app/utils/wrapper";
+import MessageIcon from "@/assets/images/contact-img.svg";
 import {
   Box,
   Button,
   Flex,
   FormControl,
   FormLabel,
-  HStack,
   Heading,
-  Icon,
   Stack,
   Text,
   Textarea,
-  useToast,
+  useToast
 } from "@chakra-ui/react";
 import { send } from "@emailjs/browser";
-import { useState } from "react";
-import { BiSolidPhoneCall } from "react-icons/bi";
-import { ImLocation2 } from "react-icons/im";
-import { MdEmail } from "react-icons/md";
-import TextareaAutoSize from "react-textarea-autosize";
-import Wrapper from "../wrapper";
-import InputField from "../input-field";
 import Image from "next/image";
-import MessageIcon from "@/assets/images/contact-img.svg";
+import { useState } from "react";
+import InputField from "../input-field";
+import Wrapper from "../wrapper";
 
 interface UserDetailsProps {
   name: any;
@@ -179,109 +173,86 @@ const ContactForm = ({ onClose }: Props) => {
 
   return (
     <Wrapper>
-      <Flex flexDirection={"column"} gap={"23px"} id="contact-me" mb={"30px"}>
-        <Flex
-          justify={"space-between"}
-          direction={{ base: "column-reverse", md: "row" }}
-          columnGap="3rem"
-          rowGap="5rem"
-        >
-             <Box w={{ base: "100%", md: "35%", lg: "30%" }}>
-            <Heading mb="2rem" fontWeight="500" variant="h6">
-              We provide every support you may need
-            </Heading>
-            <Text>
-              Our support superheroes are a click away to help you get the most
-              out of monday.com, so you can focus on working without limits.
-            </Text>
-            <Image
-              src={MessageIcon}
-              alt="message icon"
-              width={800}
-              height={800}
-              style={{
-                borderRadius: "1.2rem",
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </Box>
-          <Box
-            w={{ base: "100%", md: "60%", lg: "65%" }}
-            px={{ base: "1.5rem", sm: "3rem", lg: "6rem" }}
-            borderRadius="1rem"
-            textAlign={"center"}
-            py="6rem"
-            border="1px solid rgba(0, 0, 0, 0.15)"
-          >
-            <form onSubmit={handleFormSubmit}>
-              <Stack spacing={"15px"}>
-                <InputField
-                  label="Name"
-                  placeholder="Jane Smith"
-                  name="name"
-                  onChange={handleInputChange}
-                  value={userDetails.name}
-                  borderRadius="1rem"
-                  isRequired={true}
-                />
+      <Flex
+        justify={"space-between"}
+        align={"center"}
+        direction={{ base: "column", md: "row" }}
+        columnGap="3rem"
+        rowGap="5rem"
+      >
+        <Box w={{ base: "100%", md: "45%" }}>
+          <Heading fontWeight="600" fontSize={{ base: "3rem", md: "3.5rem" }}>
+            We provide every support you may need
+          </Heading>
+          <Text mt="2rem" mb={{ base: "3rem", md: "5rem" }}>
+            Our support superheroes are a click away to help you get the most
+            out of monday.com, so you can focus on working without limits.
+          </Text>
+          <Image
+            src={MessageIcon}
+            alt="message icon"
+            width={500}
+            height={500}
+          />
+        </Box>
+        <Box w={{ base: "100%", md: "45%" }} textAlign={"center"}>
+          <form onSubmit={handleFormSubmit}>
+            <Stack spacing={"20px"}>
+              <InputField
+                label="Full name"
+                placeholder="Enter your name"
+                name="name"
+                onChange={handleInputChange}
+                value={userDetails.name}
+                borderRadius="1rem"
+              />
 
-                <InputField
-                  label="Email address"
-                  placeholder="jane@gmail.com"
-                  name="email"
-                  onChange={handleInputChange}
-                  value={userDetails.email}
-                  type="email"
-                  borderRadius="1rem"
+              <InputField
+                label="Email address"
+                placeholder="Enter your email address"
+                name="email"
+                onChange={handleInputChange}
+                value={userDetails.email}
+                type="email"
+                borderRadius="1rem"
+              />
+
+              <FormControl fontSize={"1.6rem"}>
+                <FormLabel fontSize={"1.6rem"} fontWeight={"400"}>
+                  Message
+                </FormLabel>
+                <Textarea
+                  _placeholder={{ color: "brand.500" }}
                   isRequired={true}
-                />
-                <InputField
-                  label="Phone number"
-                  placeholder="xxxxx"
-                  name="phone"
+                  placeholder="Enter your message"
+                  value={userDetails.message}
+                  fontSize={"1.6rem"}
                   onChange={handleInputChange}
-                  value={userDetails.phone}
-                  type="phone"
                   borderRadius="1rem"
-                  isRequired={true}
+                  name="message"
+                  height={"20rem"}
+                  mb="1rem"
+                  px="2rem"
+                  border="1px solid rgba(0, 0, 0, 0.10)"
                 />
-                <FormControl fontSize={"1.6rem"}>
-                  <FormLabel fontWeight="500" fontSize={"1.6rem"}>
-                    Message
-                  </FormLabel>
-                  <Textarea
-                    as={TextareaAutoSize}
-                    isRequired={true}
-                    placeholder="Enter your message"
-                    value={userDetails.message}
-                    fontSize={"1.6rem"}
-                    onChange={handleInputChange}
-                    focusBorderColor="brand.400"
-                    borderRadius="1rem"
-                    name="message"
-                    mb="1rem"
-                    px="2rem"
-                    border="1px solid rgba(0, 0, 0, 0.10)"
-                    size="lg"
-                  />
-                </FormControl>
-              </Stack>
-              <Box>
-                <Button
-                  fontSize={"15px"}
-                  w={{ base: "80%", sm: "60%", md: "50%" }}
-                  mt="1.5rem"
-                  as={"button"}
-                  type="submit"
-                >
-                  SEND MESSAGE
-                </Button>
-              </Box>
-            </form>
-          </Box>
-         
-        </Flex>
+              </FormControl>
+            </Stack>
+            <Box>
+              <Button
+                fontSize={"1.6rem"}
+                px="2rem"
+                py="2rem"
+                bg="brand.200"
+                mt="1.5rem"
+                as={"button"}
+                borderRadius="1rem"
+                type="submit"
+              >
+                Send Message
+              </Button>
+            </Box>
+          </form>
+        </Box>
       </Flex>
     </Wrapper>
   );
