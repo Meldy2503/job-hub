@@ -20,13 +20,16 @@ import { Button } from "./button";
 import logoWhite from "@/assets/images/logo-white.svg";
 import logoYellow from "@/assets/images/logo-yellow.svg";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [currentMenu, setCurrentMenu] = useState("#home");
+  const [currentMenu, setCurrentMenu] = useState("/");
   const handlecurrentMenu = (link: string) => {
     setCurrentMenu(link);
   };
+
+  const pathname = usePathname();
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -50,6 +53,7 @@ const Navbar = () => {
       top={"0px"}
       bg={scrolled ? "brand.350" : "transparent"}
       zIndex={500}
+      boxShadow={scrolled ? "0px 0px 10px 0px #0000003b" : "none"}
     >
       <Flex
         w="95%"
@@ -81,24 +85,32 @@ const Navbar = () => {
         <Flex gap="3rem" display={{ base: "none", md: "flex" }}>
           {navData.map((link) => {
             return (
-              <Box
+              <Flex
+                flexDirection={"column"}
+                justifyContent={"center"}
+                alignItems={"center"}
                 key={link.id}
                 color={
-                  currentMenu === link.id
-                    ? "brand.200"
-                    : scrolled
-                    ? "brand.150"
-                    : "brand.100"
+                  // link.path === pathname
+                  // ? "brand.200"
+                  // :
+                  scrolled ? "brand.150" : "brand.100"
                 }
                 _hover={{
-                  color: "brand.250",
+                  color: "brand.200",
                 }}
                 onClick={() => {
                   handlecurrentMenu(link.id);
                 }}
               >
                 <Link href={link.path}>{link.name}</Link>
-              </Box>
+                <Box
+                  w={link.path === pathname ? "2.5rem" : "0"}
+                  h={".5rem"}
+                  bg={"brand.200"}
+                  rounded={"full"}
+                />
+              </Flex>
             );
           })}
         </Flex>
