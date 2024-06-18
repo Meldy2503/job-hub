@@ -6,7 +6,7 @@ import Image from "next/image";
 import hermes from "@/assets/images/hermes.svg";
 import sparkles from "@/assets/images/sparkles.svg";
 import elohq from "@/assets/images/elohq.svg";
-import starplug from "@/assets/images/starplug.svg"
+import starplug from "@/assets/images/starplug.svg";
 import sblend from "@/assets/images/sblend.svg";
 import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import Title from "../heading";
@@ -109,7 +109,6 @@ const OurClients = () => {
 };
 
 export default OurClients;
-
 
 // import styled from "styled-components";
 

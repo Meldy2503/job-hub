@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import Wrapper from "../wrapper";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";

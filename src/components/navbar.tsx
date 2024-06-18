@@ -63,24 +63,26 @@ const Navbar = () => {
         align={"center"}
         color="brand.100"
       >
-        <Flex align={"flex-end"}>
-          <Image
-            src={scrolled ? logoYellow : logoWhite}
-            alt="job hub logo"
-            height={20}
-            width={40}
-          />
+        <Link href="/">
+          <Flex align={"center"}>
+            <Image
+              src={scrolled ? logoYellow : logoWhite}
+              alt="job hub logo"
+              height={20}
+              width={40}
+            />
 
-          <Text
-            fontSize="1.6rem"
-            fontWeight={"800"}
-            letterSpacing={"0.3rem"}
-            color={scrolled ? "brand.400" : "brand.100"}
-          >
-            JOBHUB
-          </Text>
-        </Flex>
-        <Flex gap="3rem" display={{ base: "none", md: "flex" }}>
+            <Text
+              fontSize="1.6rem"
+              fontWeight={"800"}
+              letterSpacing={"0.15rem"}
+              color={scrolled ? "brand.400" : "brand.100"}
+            >
+              JOBHUB
+            </Text>
+          </Flex>
+        </Link>
+        <Flex gap="3rem" display={{ base: "none", lg: "flex" }}>
           {navData.map((link) => {
             return (
               <Flex
@@ -88,12 +90,7 @@ const Navbar = () => {
                 justifyContent={"center"}
                 alignItems={"center"}
                 key={link.id}
-                color={
-                  // link.path === pathname
-                  // ? "brand.200"
-                  // :
-                  scrolled ? "brand.150" : "brand.100"
-                }
+                color={scrolled ? "brand.150" : "brand.100"}
                 _hover={{
                   color: "brand.200",
                 }}
@@ -115,7 +112,7 @@ const Navbar = () => {
         <Flex
           align={"center"}
           gap="2rem"
-          display={{ base: "none", md: "flex" }}
+          display={{ base: "none", lg: "flex" }}
         >
           <Box color={scrolled ? "brand.150" : "brand.100"}>
             <Link href="/">Sign in</Link>
@@ -130,7 +127,7 @@ const Navbar = () => {
             bg={scrolled ? "brand.200" : "brand.100"}
           />
         </Flex>
-        <Box onClick={onOpen} display={{ base: "block", md: "none" }}>
+        <Box onClick={onOpen} display={{ base: "block", lg: "none" }}>
           <Icon
             as={isOpen ? AiOutlineClose : GiHamburgerMenu}
             boxSize={10}
@@ -154,7 +151,7 @@ const Navbar = () => {
                     color={currentMenu === menu.id ? "brand.200" : "brand.150"}
                   >
                     <Link
-                      href={menu.id}
+                      href={menu.path}
                       onClick={() => {
                         handlecurrentMenu(menu.id);
                         onClose();
