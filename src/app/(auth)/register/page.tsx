@@ -55,16 +55,15 @@ const Register = () => {
     <AuthWrapper title="Create Your Account">
       <Stack
         alignSelf={"flex-start"}
-        maxW={"550px"}
+        maxW={"520px"}
         w={"95%"}
-        pb={"3rem"}
-        mt={{ base: "13rem", sm: "2rem" }}
+        py={"2.5rem"}
       >
         {/* <GoogleButton /> */}
 
         <form>
-          <Flex flexDir="column" gap={6}>
-            <Flex gap={8} direction={{ base: "column", sm: "row" }}>
+          <Flex flexDir="column" gap={5} mb='2rem'>
+            <Flex gap={8} direction={{ base: "column", sm: "row" }} >
               <InputField
                 label="First name"
                 placeholder="John"
