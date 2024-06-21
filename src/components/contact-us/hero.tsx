@@ -15,7 +15,7 @@ const ContactHeroSection = () => {
       width="100%"
       align={"center"}
       justify={"center"}
-      h="60vh"
+      h="70vh"
       color="white"
       textAlign={"center"}
     >

@@ -1,12 +1,17 @@
 "use client";
 
 import React from "react";
-import { Box, Flex, Icon, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Icon,
+  Text,
+  Button as ChakraButton,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 
 interface BtnProps {
-  path: string;
   children?: React.ReactNode;
   onClick?: () => void;
   py?: string;
@@ -24,6 +29,11 @@ interface BtnProps {
   boxShadow?: string;
   mt?: string;
   isIcon?: boolean;
+  w?: string;
+}
+
+interface LinkProps extends BtnProps {
+  path: string;
 }
 
 export const Button = ({
@@ -32,8 +42,8 @@ export const Button = ({
   py,
   px,
   fontSize,
-  ClassName,
   path,
+  ClassName,
   borderRadius,
   color,
   bg,
@@ -42,10 +52,11 @@ export const Button = ({
   iconColor,
   isIcon,
   btnText,
+  w,
   btnGap,
   boxShadow,
-  mt
-}: BtnProps) => {
+  mt,
+}: LinkProps) => {
   return (
     <Box
       className={ClassName ?? "btn"}
@@ -55,18 +66,18 @@ export const Button = ({
       fontSize={fontSize ?? "1.6rem"}
       fontWeight={fontWeight ?? 600}
       transition={"all .3s ease-in"}
-      borderRadius={borderRadius ?? "1rem"}
+      borderRadius={borderRadius ?? "0.3rem"}
       py={py ?? "1rem"}
       px={px ?? "2rem"}
       mt={mt}
       onClick={onClick}
-      w="fit-content"
+      w={w ?? "fit-content"}
       color={color ?? "brand.250"}
       bg={bg ?? "brand.200"}
       border={border ?? "none"}
       boxShadow={boxShadow ?? "0px 4px 30px 0px #c1baf8b1"}
     >
-      <Link href={path} target="_blank">
+      <Link href={path}>
         {children ?? (
           <Flex gap={btnGap ?? "1rem"} align={"center"}>
             <Text pl="1rem">{btnText}</Text>
@@ -82,6 +93,26 @@ export const Button = ({
           </Flex>
         )}
       </Link>
+    </Box>
+  );
+};
+
+export const SubmitButton = ({ px, py, bg, mt, btnText, w }: BtnProps) => {
+  return (
+    <Box>
+      <ChakraButton
+        fontSize={"1.6rem"}
+        px={px ?? "2rem"}
+        py={py ?? "2rem"}
+        bg={bg ?? "brand.200"}
+        mt={mt ?? "1.5rem"}
+        as={"button"}
+        borderRadius="0.3rem"
+        type="submit"
+        w={w}
+      >
+        {btnText ?? "Send Message"}
+      </ChakraButton>
     </Box>
   );
 };
