@@ -52,7 +52,7 @@ const Hero = () => {
             </Text>
             <Button
               btnText="Join Us"
-              path="/get-started"
+              path="/register"
               isIcon
               bg="brand.100"
               mt="3rem"

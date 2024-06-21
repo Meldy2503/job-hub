@@ -39,7 +39,7 @@ const Cta = () => {
               Explore the best procurement platform with your organisation
             </Heading>
 
-            <Button path="/jobs" btnText="Get started" isIcon />
+            <Button path="/register" btnText="Get started" isIcon />
           </Box>
         </Box>
         <Flex w={{ base: "100%", md: "37%" }} justifyContent={"center"}>

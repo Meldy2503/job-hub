@@ -1,68 +1,5 @@
-// 'use client'
-
-// import React from "react";
-// import Wrapper from "../wrapper";
-// import { Box, Flex, Heading, Text } from "@chakra-ui/react";
-// import Image from "next/image";
-// import vector from "@/assets/images/vector.svg";
-// import ring from "@/assets/images/ring.svg";
-// import { Button } from "../button";
-
-// const ContactForm = () => {
-//   return (
-//     <Wrapper>
-//     <Flex
-//       justifyContent={"space-between"}
-//       w={"100%"}
-//       alignItems={"center"}
-//       direction={{ base: "column-reverse", md: "row" }}
-//       gap={"5rem"}
-//     >
-//       <Box w={{ base: "100%", md: "55%" }}>
-//         <Text fontSize="1.6rem">
-//           Trusted by over a hundred organisation across the globe
-//         </Text>
-//         <Box pos={"relative"}>
-//           <Box pos={"absolute"} top="-2.9rem" left={"-1rem"}>
-//             <Image src={vector} alt={"vector"} width={40} height={40} />
-//           </Box>
-//           <Heading
-//             fontWeight={500}
-//             fontSize={{ base: "3rem", xl: "4rem" }}
-//             mt={"4.8rem"}
-//             mb={"4rem"}
-//           >
-//             Explore the best procurement platform with your organisation
-//           </Heading>
-
-//           <Button path="/jobs" btnText="Get started" isIcon />
-//         </Box>
-//       </Box>
-//       <Flex w={{ base: "100%", md: "37%" }} justifyContent={"center"}>
-//         <Image
-//           src={ring}
-//           alt={"ring"}
-//           width={500}
-//           height={500}
-//           style={{
-//             objectFit: "cover",
-//             maxWidth: "100%",
-//           }}
-//         />
-//       </Flex>
-//     </Flex>
-//   </Wrapper>  )
-// }
-
-// export default ContactForm
-
 "use client";
 
-// import { Button } from "@/app/utils/button";
-// import { Heading, Title } from "@/app/utils/heading";
-// import { InputElement } from "@/app/utils/input-element";
-// import Text from "@/app/utils/text";
-// import Wrapper from "@/app/utils/wrapper";
 import MessageIcon from "@/assets/images/contact-img.svg";
 import {
   Box,
@@ -74,13 +11,14 @@ import {
   Stack,
   Text,
   Textarea,
-  useToast
+  useToast,
 } from "@chakra-ui/react";
 import { send } from "@emailjs/browser";
 import Image from "next/image";
 import { useState } from "react";
 import InputField from "../input-field";
 import Wrapper from "../wrapper";
+import { SubmitButton } from "../button";
 
 interface UserDetailsProps {
   name: any;
@@ -201,20 +139,16 @@ const ContactForm = ({ onClose }: Props) => {
               <InputField
                 label="Full name"
                 placeholder="Enter your name"
-                name="name"
                 onChange={handleInputChange}
                 value={userDetails.name}
-                borderRadius="1rem"
               />
 
               <InputField
                 label="Email address"
                 placeholder="Enter your email address"
-                name="email"
                 onChange={handleInputChange}
                 value={userDetails.email}
                 type="email"
-                borderRadius="1rem"
               />
 
               <FormControl fontSize={"1.6rem"}>
@@ -228,7 +162,7 @@ const ContactForm = ({ onClose }: Props) => {
                   value={userDetails.message}
                   fontSize={"1.6rem"}
                   onChange={handleInputChange}
-                  borderRadius="1rem"
+                  borderRadius="0.3rem"
                   name="message"
                   height={"20rem"}
                   mb="1rem"
@@ -238,18 +172,8 @@ const ContactForm = ({ onClose }: Props) => {
               </FormControl>
             </Stack>
             <Box>
-              <Button
-                fontSize={"1.6rem"}
-                px="2rem"
-                py="2rem"
-                bg="brand.200"
-                mt="1.5rem"
-                as={"button"}
-                borderRadius="1rem"
-                type="submit"
-              >
-                Send Message
-              </Button>
+              <SubmitButton />
+              
             </Box>
           </form>
         </Box>

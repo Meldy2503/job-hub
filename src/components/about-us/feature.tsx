@@ -21,7 +21,7 @@ const Feature = () => {
         <Text
           textAlign={"center"}
           maxW={"90rem"}
-          fontSize={{ base: "3rem", md: "4.5rem" }}
+          fontSize={{ base: "3rem", md: '3.7rem', lg: "4.5rem" }}
           color={"white"}
         >
           Efficiently request for items, authorize, and manage purchases within

@@ -1,8 +1,20 @@
-"use client";
-
-import React from "react";
-import { FormControl, FormLabel, Input, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { FiEye } from "react-icons/fi";
+import { RiEyeCloseLine } from "react-icons/ri";
 import { generalStyle } from "@/utils";
+import {
+  Box,
+  FormControl,
+  FormLabel,
+  Icon,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Text,
+} from "@chakra-ui/react";
+import { Controller } from "react-hook-form";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 interface InputProps {
   name?: string;
@@ -12,6 +24,7 @@ interface InputProps {
   index?: any;
   type?: string;
   label?: string;
+  id?: string;
   icon?: any;
   control?: any;
   as?: any;
@@ -23,6 +36,11 @@ interface InputProps {
   isRequired?: boolean;
   defaultValue?: string;
   register?: any;
+  fontWeight?: string;
+  isDate?: boolean;
+  isPassword?: boolean;
+  isPhone?: boolean;
+  maxDate?: any;
   errorMessage?: any;
   helperText?: string;
 }
@@ -38,31 +56,96 @@ const InputField = ({
   name,
   isDisabled,
   isRequired,
+  fontWeight,
   register,
   errorMessage,
   defaultValue,
+  control,
+  id,
+  isPassword,
+  isPhone,
+  isDate,
+  maxDate,
 }: InputProps) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClick = () => setShowPassword(!showPassword);
+
   return (
     <FormControl fontSize={"1.6rem"}>
-      <FormLabel fontSize={"1.5rem"} fontWeight={'400'}>
+      <FormLabel fontWeight={fontWeight ?? "500"} fontSize={"1.55rem"}>
         {label} {icon} {isRequired && <span style={{ color: "red" }}>*</span>}
       </FormLabel>
+      {isPhone ? (
+        <Controller
+          name={id ? id : ""}
+          control={control}
+          render={({
+            field: { onChange: onPhoneChange, value: phoneValue },
+          }) => (
+            <PhoneInput
+              id={id}
+              onChange={onPhoneChange}
+              value={phoneValue}
+              defaultValue={defaultValue}
+              isDisabled={isDisabled}
+              isRequired={isRequired}
+              defaultCountry="NG"
+              placeholder="+2348 037 547 855"
+              focusBorderColor="typography.lightGreen"
+              {...register}
+              style={{ ...generalStyle }}
+            />
+          )}
+        />
+      ) : isPassword ? (
+        <InputGroup size="md">
+          <Input
+            onChange={onChange}
+            defaultValue={defaultValue}
+            type={showPassword ? "text" : "password"}
+            placeholder="********"
+            focusBorderColor="typography.lightGreen"
+            {...register}
+            style={{ ...generalStyle }}
+          />
 
-      <Input
-        onChange={onChange}
-        as={as}
-        name={name}
-        value={value}
-        {...register}
-        focusBorderColor="typography.lightGreen"
-        isDisabled={isDisabled}
-        isRequired={isRequired}
-        defaultValue={defaultValue}
-        _placeholder={{ color: "brand.500" }}
-        type={type ?? "text"}
-        placeholder={placeholder }
-        style={{ ...generalStyle }}
-      />
+          <InputRightElement mt="1.3rem" mr="1rem">
+            <Box onClick={handleClick} cursor="pointer">
+              {showPassword ? (
+                <Icon as={FiEye} boxSize={7}  />
+              ) : (
+                <Icon as={RiEyeCloseLine} boxSize={7} />
+              )}
+            </Box>
+          </InputRightElement>
+        </InputGroup>
+      ) : isDate ? (
+        <Input
+          size="lg"
+          type="date"
+          max={maxDate}
+          {...register}
+          defaultValue={defaultValue}
+          placeholder={placeholder}
+          onChange={onChange}
+          style={{ ...generalStyle }}
+        />
+      ) : (
+        <Input
+          onChange={onChange}
+          as={as}
+          name={name}
+          value={value}
+          {...register}
+          focusBorderColor="typography.lightGreen"
+          isDisabled={isDisabled}
+          isRequired={isRequired}
+          defaultValue={defaultValue}
+          type={type ?? "text"}
+          placeholder={placeholder}
+          style={{ ...generalStyle }}
+        />
+      )}
 
       <Text color="red" fontSize="1.3rem" mt=".5rem">
         {" "}
