@@ -59,8 +59,7 @@ const Login = () => {
         alignSelf={"flex-start"}
         maxW={"520px"}
         w={"95%"}
-        pb={"3rem"}
-        pt="2rem"
+        py={"2.5rem"}
       >
         {/* <GoogleButton /> */}
 
