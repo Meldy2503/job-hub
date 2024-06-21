@@ -26,7 +26,7 @@ const Cta = () => {
           opportunities
         </Text>
         <Button
-          path="/"
+          path="/register"
           btnText="Get started"
           isIcon
           boxShadow="none"

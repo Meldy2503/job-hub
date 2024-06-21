@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import logoWhite from "@/assets/images/logo-white.svg";
+import logoYellow from "@/assets/images/logo-yellow.svg";
 import {
   Box,
   Drawer,
@@ -9,18 +11,15 @@ import {
   DrawerContent,
   Flex,
   Icon,
-  Text,
-  useDisclosure,
+  useDisclosure
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { navData } from "../utils/constants";
 import { Button } from "./button";
-import logoWhite from "@/assets/images/logo-white.svg";
-import logoYellow from "@/assets/images/logo-yellow.svg";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
+import Logo from "./logo";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -63,25 +62,11 @@ const Navbar = () => {
         align={"center"}
         color="brand.100"
       >
-        <Link href="/">
-          <Flex align={"center"}>
-            <Image
-              src={scrolled ? logoYellow : logoWhite}
-              alt="job hub logo"
-              height={20}
-              width={40}
-            />
+        <Logo
+          src={scrolled ? logoYellow : logoWhite}
+          color={scrolled ? "brand.400" : "brand.100"}
+        />
 
-            <Text
-              fontSize="1.6rem"
-              fontWeight={"800"}
-              letterSpacing={"0.15rem"}
-              color={scrolled ? "brand.400" : "brand.100"}
-            >
-              JOBHUB
-            </Text>
-          </Flex>
-        </Link>
         <Flex gap="3rem" display={{ base: "none", lg: "flex" }}>
           {navData.map((link) => {
             return (
@@ -115,10 +100,10 @@ const Navbar = () => {
           display={{ base: "none", lg: "flex" }}
         >
           <Box color={scrolled ? "brand.150" : "brand.100"}>
-            <Link href="/">Sign in</Link>
+            <Link href="/login">Sign in</Link>
           </Box>
           <Button
-            path="/"
+            path="/register"
             btnText="Get started"
             isIcon
             boxShadow="none"
@@ -165,10 +150,10 @@ const Navbar = () => {
             </Flex>
             <Flex align={"center"} gap="4rem" direction={"column"}>
               <Box mt="4rem">
-                <Link href="/">Sign in</Link>
+                <Link href="/login">Sign in</Link>
               </Box>
               <Button
-                path="/"
+                path="/register"
                 btnText="Get started"
                 isIcon
                 boxShadow="none"

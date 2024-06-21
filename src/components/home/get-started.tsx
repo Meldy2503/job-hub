@@ -1,22 +1,21 @@
 "use client";
 
-import React from "react";
-import Wrapper from "../wrapper";
 import employee from "@/assets/images/employee1.webp";
 import employer from "@/assets/images/interview.webp";
 import {
   Box,
   Flex,
   HStack,
-  Heading,
   ListItem,
   Spacer,
   Text,
-  UnorderedList,
+  UnorderedList
 } from "@chakra-ui/react";
-import Title from "../heading";
 import Image from "next/image";
+import React from "react";
 import { Button } from "../button";
+import Title from "../heading";
+import Wrapper from "../wrapper";
 
 interface BannerProps {
   flexDir?: any;
@@ -68,7 +67,7 @@ const GetStarted = () => {
       <Title>Get started as</Title>
       <Banner
         title="A Job Seeker"
-        path="/employee"
+        path="/register"
         flexDir={"row"}
         src={employee}
       >
@@ -87,7 +86,7 @@ const GetStarted = () => {
         </UnorderedList>
       </Banner>
       <Spacer my={{ base: "8rem", md: "14rem" }} />
-      <Banner title="An Employer" src={employer} path="/employer">
+      <Banner title="An Employer" src={employer} path="/register">
         <Flex gap={"2rem"} flexDir={"column"}>
           <Box>
             <Text fontSize={"2rem"} fontWeight={"500"}>

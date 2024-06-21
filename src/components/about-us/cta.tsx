@@ -1,6 +1,3 @@
-
-
-
 import React from "react";
 import Wrapper from "../wrapper";
 import { Box, Flex, Heading } from "@chakra-ui/react";
@@ -14,25 +11,29 @@ const Cta = () => {
       <Flex
         justifyContent={"space-between"}
         alignItems={"center"}
-        w={{ base: "100%", md: "90%", lg: "80%" }}
-        mx={"auto"}
-        flexDir={{ base: "column-reverse", md: "row" }}
+        flexDir={{ base: "column", md: "row" }}
+        gap='5rem'
       >
         <Box w={{ base: "100%", lg: "40%" }}>
-          <Heading fontSize={"5rem"} fontWeight={"700"} mb={"3rem"}>
-            Join{" "}
+          <Heading
+            fontSize={{ base: "3rem", md: '3.5rem', lg: "4.5rem" }}
+            fontWeight={"700"}
+            mb={"2rem"}
+            lineHeight={"1.4"}
+          >
+            Sign up today on{" "}
             <span
               style={{
-                color: "#ff5621",
+                color: "#FFAF2E",
               }}
             >
               jobHub
             </span>{" "}
-            today and land your dream job
+            to secure your dream job.
           </Heading>
-          <Button btnText="Get started" path="/jobs" isIcon />
+          <Button btnText="Get started" path="/register" isIcon />
         </Box>
-        <Box w={{ base: "100%", lg: "50%" }} mb={{ base: "3rem", md: "0" }}>
+        <Box w={{ base: "100%", lg: "50%" }} >
           <Image
             src={team2}
             alt={"team"}
