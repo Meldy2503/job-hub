@@ -23,7 +23,7 @@ interface Props {
 const AuthWrapper = ({ children, title }: Props) => {
   const [isMobile] = useMediaQuery("(max-width: 960px)");
   return (
-      <HStack align={"stretch"} overflow={"auto"}>
+      <HStack align={"stretch"}>
         <Stack
           flex={0.8}
           textAlign="center"
@@ -31,7 +31,7 @@ const AuthWrapper = ({ children, title }: Props) => {
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
-          h="100vh"
+           h="100vh"
           position={"sticky"}
           top="0px"
           display={{ base: "none", lg: "flex" }}
@@ -85,9 +85,9 @@ const AuthWrapper = ({ children, title }: Props) => {
             justify={"center"}
             direction={"column"}
             w={"90%"}
-            maxW={"500px"}
+             maxW={"500px"}
             h="100vh"
-            overflow={"auto"}
+            // overflow={"auto"}
           >
             <Flex
               justify="center"

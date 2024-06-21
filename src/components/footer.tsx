@@ -44,7 +44,7 @@ const Footer = () => {
           align={"center"}
         >
           <Box>
-            <Logo src={logoWhite} color={"brand.400"} width={65} />
+            <Logo src={logoWhite} color={"brand.100"} width={65} />
             <Flex fontSize={"2rem"} color={"brand.100"} gap={5} mt="2rem">
               <Box bg="brand.450" borderRadius={"50%"} p="1rem">
                 <BsTwitter />
