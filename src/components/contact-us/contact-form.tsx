@@ -16,7 +16,7 @@ import {
 import { send } from "@emailjs/browser";
 import Image from "next/image";
 import { useState } from "react";
-import InputField from "../input-field";
+import { InputField } from "../input-field";
 import Wrapper from "../wrapper";
 import { SubmitButton } from "../button";
 
@@ -173,7 +173,6 @@ const ContactForm = ({ onClose }: Props) => {
             </Stack>
             <Box>
               <SubmitButton />
-              
             </Box>
           </form>
         </Box>
