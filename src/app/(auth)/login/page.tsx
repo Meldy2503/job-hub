@@ -2,7 +2,7 @@
 
 import AuthWrapper from "@/components/Layouts/auth-wrapper";
 import { SubmitButton } from "@/components/button";
-import InputField from "@/components/input-field";
+import { InputField } from "@/components/input-field";
 import {
   Box,
   Button,
@@ -55,12 +55,7 @@ const Login = () => {
 
   return (
     <AuthWrapper title="Login to your account">
-      <Stack
-        alignSelf={"flex-start"}
-        maxW={"520px"}
-        w={"95%"}
-        py={"2.5rem"}
-      >
+      <Stack alignSelf={"flex-start"} maxW={"520px"} w={"95%"} py={"2.5rem"}>
         {/* <GoogleButton /> */}
 
         <form>
