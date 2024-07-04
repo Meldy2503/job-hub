@@ -54,7 +54,7 @@ const LandingPage = () => {
           h="100%"
         >
           <Flex direction="column" w={{ base: "100%", md: "80%", lg: "50%" }}>
-            <Heading fontSize={isMobile ? "3.5rem" : "6rem"} fontWeight="600">
+            <Heading fontSize={isMobile ? "4rem" : "6rem"} fontWeight="600">
               A software embedded with features for
               <span
                 style={{

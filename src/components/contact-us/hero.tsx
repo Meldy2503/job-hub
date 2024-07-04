@@ -19,7 +19,7 @@ const ContactHeroSection = () => {
       color="white"
       textAlign={"center"}
     >
-      <VStack>
+      <VStack px="1rem">
         <Text
           fontSize={{ base: "3.5rem", lg: "5rem" }}
           fontWeight={"600"}
@@ -28,9 +28,7 @@ const ContactHeroSection = () => {
         >
           Got any Feedbacks or Questions?{" "}
         </Text>
-        <Text mt="1rem" px="1rem">
-          We are here to assist you every step of the way.
-        </Text>
+        <Text mt="1rem">We are here to assist you every step of the way.</Text>
       </VStack>
     </Flex>
   );
