@@ -87,7 +87,6 @@ const AuthWrapper = ({ children, title }: Props) => {
             w={"90%"}
              maxW={"500px"}
             h="100vh"
-            // overflow={"auto"}
           >
             <Flex
               justify="center"

@@ -2,7 +2,7 @@
 
 import AuthWrapper from "@/components/Layouts/auth-wrapper";
 import { SubmitButton } from "@/components/button";
-import InputField from "@/components/input-field";
+import { InputField } from "@/components/input-field";
 import { Button, Center, Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -53,17 +53,12 @@ const Register = () => {
 
   return (
     <AuthWrapper title="Create Your Account">
-      <Stack
-        alignSelf={"flex-start"}
-        maxW={"520px"}
-        w={"95%"}
-        py={"2.5rem"}
-      >
+      <Stack alignSelf={"flex-start"} maxW={"520px"} w={"95%"} py={"2.5rem"}>
         {/* <GoogleButton /> */}
 
         <form>
-          <Flex flexDir="column" gap={5} mb='2rem'>
-            <Flex gap={8} direction={{ base: "column", sm: "row" }} >
+          <Flex flexDir="column" gap={5} mb="2rem">
+            <Flex gap={8} direction={{ base: "column", sm: "row" }}>
               <InputField
                 label="First name"
                 placeholder="John"

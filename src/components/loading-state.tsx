@@ -1,13 +1,13 @@
 "use client";
 
+import loadingIcon from "@/assets/images/loading-icon.svg";
 import { Center } from "@chakra-ui/react";
 import Image from "next/image";
-import loadingIcon from "@/assets/images/loading-icon.svg";
 
 const LoadingIcon = () => {
   return (
     <Center h="100vh">
-      <Image src={loadingIcon} height={100} width={100} alt="loading icon" />
+      <Image src={loadingIcon} height={80} width={80} alt="loading icon" />
     </Center>
   );
 };
