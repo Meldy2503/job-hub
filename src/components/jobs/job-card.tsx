@@ -1,18 +1,10 @@
 "use client";
 import {
   Box,
-  Card,
-  CardBody,
-  CardHeader,
+  Flex,
   Heading,
-  List,
-  ListItem,
-  Stack,
-  StackDivider,
-  Text,
-  UnorderedList,
+  Text
 } from "@chakra-ui/react";
-import React from "react";
 
 interface JobCardProps {
   title: string;
@@ -35,41 +27,45 @@ const JobCard = ({
 }: JobCardProps) => {
   return (
     <Box
-      border={"1px solid #dfdede"}
-      p={"2rem"}
-      borderRadius={"1rem"}
-      w={"full"}
+     
     >
-      <Heading as={"h3"} size="lg">
+      <Heading fontSize={'2rem'} color={"brand.400"}
+      >
         {title}
       </Heading>
-      <Text pt="2" fontSize="lg">
+      <Flex justify={'space-between'} columnGap={'2rem'} rowGap={'.5rem'} flexWrap={'wrap'} my='1rem'>
+        <Box>
+      <Text pt="2">
         {company}
       </Text>
-      <Text pt="2" fontSize="lg">
+      <Text pt="2">
         {salary}
       </Text>
-      <Text pt="2" fontSize="lg">
+        </Box>
+        <Box>
+      <Text pt="2">
         {location}
       </Text>
 
-      <Text pt="2" fontSize="lg">
+      <Text pt="2">
         {type}
       </Text>
 
-      <Stack divider={<StackDivider />} spacing="4" mt={"2rem"}>
-        <Box>
-          <Heading size="xs" textTransform="uppercase">
-            Summary
-          </Heading>
-          <UnorderedList fontSize={"md"}>
-            <ListItem>{summary}</ListItem>
-          </UnorderedList>
         </Box>
-      </Stack>
-      <Text fontSize="sm" mt={"2rem"}>
+      </Flex>
+
+        <Box mt='2rem'>
+          <Text fontWeight={'semibold'}  color={"brand.150"}>
+            Summary
+          </Text>
+            <Text noOfLines={3}>{summary}</Text>
+        </Box>
+      <Flex justify={'flex-end'}>
+
+      <Text mt={"1rem"}>
         {posted}
       </Text>
+      </Flex>
     </Box>
   );
 };

@@ -2,18 +2,16 @@
 
 import {
   Box,
-  Button,
   Flex,
   FormControl,
   Grid,
-  Text,
-  VStack,
+  Text
 } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { InputField } from "../input-field";
+import { useState } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { SubmitButton } from "../button";
+import { InputField } from "../input-field";
 
 const Hero = () => {
   const [data, setData] = useState({
@@ -40,27 +38,28 @@ const Hero = () => {
         color="white"
         textAlign={"center"}
         flexDirection={"column"}
+        px="1rem"
       >
-        <VStack>
-          <Text
-            fontSize={{ base: "3.5rem", lg: "5rem" }}
+      <Text
+            fontSize={{ base: "3.5rem", lg: "4.5rem" }}
             fontWeight={"600"}
-            w={{ base: "95%", md: "80%" }}
+            w={{ base: "100%", sm: '80%', xl: "50%" }}
             lineHeight={"1.3"}
-            my={"3rem"}
+            mt={"3.5rem "}
+            mb={"2rem "}
           >
             Explore and discover the right job for you!
           </Text>
-        </VStack>
         <Box className="glass" w={"full"} py={"4rem"} my={"4rem"}>
           <FormControl onSubmit={handleSubmit}>
             <Grid
               maxWidth={"128rem"}
               mx={"auto"}
-              gap={"4rem"}
-              templateColumns={"1fr 1fr 200px"}
+              gap={{base: "1rem", md: '2rem', xl: "4rem"}}
+              templateColumns={{base: "1fr", md:"1fr 1fr 200px"}}
               alignItems={"center"}
               w={"95%"}
+
             >
               <InputField
                 name="jobTitle"
@@ -82,6 +81,7 @@ const Hero = () => {
             </Grid>
           </FormControl>
         </Box>
+
       </Flex>
     </>
   );
