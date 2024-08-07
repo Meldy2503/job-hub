@@ -7,9 +7,11 @@ import {
   Icon,
   Text,
   Button as ChakraButton,
+  HStack,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
+import { MdAdd } from "react-icons/md";
 
 interface BtnProps {
   children?: React.ReactNode;
@@ -26,6 +28,7 @@ interface BtnProps {
   fontWeight?: string;
   btnText?: string;
   btnGap?: string;
+  type?: any;
   boxShadow?: string;
   mt?: string;
   isIcon?: boolean;
@@ -52,6 +55,7 @@ export const Button = ({
   iconColor,
   isIcon,
   btnText,
+  type,
   w,
   btnGap,
   boxShadow,
@@ -97,7 +101,16 @@ export const Button = ({
   );
 };
 
-export const SubmitButton = ({ px, py, bg, mt, btnText, w }: BtnProps) => {
+export const SubmitButton = ({
+  px,
+  py,
+  bg,
+  mt,
+  btnText,
+  w,
+  type,
+  onClick,
+}: BtnProps) => {
   return (
     <Box>
       <ChakraButton
@@ -107,12 +120,36 @@ export const SubmitButton = ({ px, py, bg, mt, btnText, w }: BtnProps) => {
         bg={bg ?? "brand.200"}
         mt={mt ?? "1.5rem"}
         as={"button"}
+        onClick={onClick}
         borderRadius="0.3rem"
-        type="submit"
+        type={type ?? "submit"}
         w={w}
       >
         {btnText ?? "Send Message"}
       </ChakraButton>
     </Box>
+  );
+};
+
+
+
+export const AddNewButton = ({ onClick }: BtnProps) => {
+  return (
+    <Flex justify={"flex-end"} mt="2rem">
+      <ChakraButton
+        bg="brand.200"
+        py=".4rem"
+        px="1.2rem"
+        onClick={onClick}
+        _hover={{ bg: "brand.350" }}
+      >
+        <HStack>
+          <Text fontWeight={"600"} fontSize="1.4rem">
+            Add
+          </Text>
+          <Icon as={MdAdd} boxSize={6} />
+        </HStack>
+      </ChakraButton>
+    </Flex>
   );
 };
